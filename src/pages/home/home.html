@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Calculadora DeVry
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-fab right bottom>
+    <button ion-fab (click)="create()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
+  <ion-grid class="empty" *ngIf="!disciplinas || !disciplinas.length">
+    <ion-row center>
+      <ion-col>
+        <ion-icon name="ios-list-box-outline"></ion-icon>
+        <h1>Sem disciplinas cadastradas</h1>
+        <p>Você ainda não cadastrou nenhuma disciplina</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card *ngFor="let disciplina of disciplinas" (click)="edit(disciplina)">
+
+    <ion-card-header>
+      <h1 text-center>{{ disciplina.titulo }}</h1>
+      <div *ngIf="disciplina.notas.situacao">
+        <ion-badge color="danger" *ngIf="disciplina.notas.situacao === 'reprovado'">Reprovado</ion-badge>
+        <ion-badge color="secondary" *ngIf="disciplina.notas.situacao === 'aprovado'">Aprovado</ion-badge>
+      </div>
+    </ion-card-header>
+
+    <ion-card-content *ngIf="disciplina.notas.mediaFinal !== null" text-center>
+      <div ion-text class="nota" color="secondary" *ngIf="disciplina.notas.mediaFinal >= 5">{{ disciplina.notas.mediaFinal | number: '1.1-1' }}</div>
+      <div ion-text class="nota" color="danger" *ngIf="disciplina.notas.mediaFinal < 5">{{ disciplina.notas.mediaFinal | number: '1.1-1' }}</div>
+      <h2 class="titulo">Média final</h2>
+    </ion-card-content>
+
+    <ion-card-content *ngIf="disciplina.notas.notaParaAP3 !== null && disciplina.notas.notaParaAP3 <= 10" text-center>
+      <div ion-text class="nota" color="primary">{{ disciplina.notas.notaParaAP3 | number: '1.1-1' }}</div>
+      <h2 class="titulo">Necessário tirar na AP3</h2>
+    </ion-card-content>
+
+    <ion-card-content *ngIf="disciplina.notas.notaParaAP3 > 10" text-center>
+      Não foi dessa vez, sorte na próxima....
+    </ion-card-content>
+
+    <ion-row *ngIf="disciplina.notas.ap1 || disciplina.notas.ap2 || disciplina.notas.ap3">
+      <ion-col center text-center>
+        <app-nota item-left ion-text titulo="AP1" [nota]="disciplina.notas.ap1"></app-nota>
+      </ion-col>
+      <ion-col center text-center>
+        <app-nota item-left ion-text titulo="AP2" [nota]="disciplina.notas.ap2"></app-nota>
+      </ion-col>
+      <ion-col center text-center>
+        <app-nota item-left ion-text titulo="AP3" [nota]="disciplina.notas.ap3"></app-nota>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+</ion-content>
