@@ -22,8 +22,8 @@ Para compilar a aplicação, é necessário definir qual plataforma será  direc
 * Para iOS <code>ionic platform add ios</code>
 
 ### Compilando a build
-* Para Android: <code>cordova build --release android</code>
-* Para iOS: <code>cordova build --release ios</code>
+* Para Android: <code>ionic build android --release</code>
+* Para iOS: <code>ionic build ios --release</code>
 
 ### Gerando o .apk 
 * Execute: <code>ionic run android --device</code>
