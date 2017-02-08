@@ -1,4 +1,6 @@
+import { NotaValidator } from './../../validators/nota';
 import { DisciplinaModel } from './../../models/disciplina.model';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Disciplinas } from './../../providers/disciplinas';
 import { Component } from '@angular/core';
 import { AlertController, NavController, NavParams, ToastController } from 'ionic-angular';
@@ -10,18 +12,30 @@ import { AlertController, NavController, NavParams, ToastController } from 'ioni
 export class DisciplinaPage {
   disciplina: DisciplinaModel;
 
+  disciplinaForm: FormGroup;
+
   constructor(
-    public navCtrl: NavController,
-    public alertCtrl: AlertController,
-    public toastCtrl: ToastController,
-    public navParams: NavParams,
-    public disciplinasService: Disciplinas
+    private navCtrl: NavController,
+    private alertCtrl: AlertController,
+    private toastCtrl: ToastController,
+    private formBuilder: FormBuilder,
+    private navParams: NavParams,
+    private disciplinasService: Disciplinas
   ) {
     this.disciplina = this.navParams.get('disciplina');
 
     if (!this.disciplina) {
       this.disciplina = new DisciplinaModel();
     }
+
+    this.disciplinaForm = this.formBuilder.group({
+      titulo: ['', Validators.required],
+      ap1: ['', NotaValidator.isValid],
+      ap2: ['', NotaValidator.isValid],
+      ap3: ['', NotaValidator.isValid]
+    });
+
+    console.log(this.disciplinaForm);
   }
 
   save() {
