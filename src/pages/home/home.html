@@ -47,7 +47,7 @@
       Não foi dessa vez, sorte na próxima....
     </ion-card-content>
 
-    <ion-row *ngIf="disciplina.notas.ap1 || disciplina.notas.ap2 || disciplina.notas.ap3">
+    <ion-row *ngIf="disciplina.notas.ap1 !== null || disciplina.notas.ap2 !== null || disciplina.notas.ap3 !== null">
       <ion-col center text-center>
         <app-nota item-left ion-text titulo="AP1" [nota]="disciplina.notas.ap1"></app-nota>
       </ion-col>
@@ -58,6 +58,5 @@
         <app-nota item-left ion-text titulo="AP3" [nota]="disciplina.notas.ap3"></app-nota>
       </ion-col>
     </ion-row>
-
   </ion-card>
 </ion-content>
