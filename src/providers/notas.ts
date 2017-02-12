@@ -26,4 +26,16 @@ export class Notas {
   mediaFinal(ap1: number, ap2: number, ap3: number): number {
     return Number(Math.abs(( (ap1 + ap2) * 3 + ap3 * 4 ) / 10).toFixed(1));
   }
+
+  /**
+   * Faz um calculo da nota que deve ser tirada
+   *
+   * @param {number} ap3 Nota da AP3
+   * @param {number} apx Nota da AP1/AP2
+   *
+   * @returns {number}
+   */
+  previsao(ap3: number, apx: number) {
+    return Number(((50 - (apx * 3 + ap3 * 4)) / 3).toFixed(1));
+  }
 }
