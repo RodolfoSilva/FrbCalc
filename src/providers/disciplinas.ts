@@ -18,22 +18,27 @@ export class Disciplinas {
     public notas: Notas
   ) {}
 
+  private isNumber(value: any) {
+    return value != null ? !isNaN(Number(value)) : false;
+  }
+
   updateCalcs(disciplina: DisciplinaModel) {
+    disciplina.notas.mediaFinal = null;
+    disciplina.notas.notaParaAP3 = null;
 
-      disciplina.notas.mediaFinal = null;
-      disciplina.notas.notaParaAP3 = null;
+    let ap1 = disciplina.notas.ap1;
+    let ap2 = disciplina.notas.ap2;
+    let ap3 = disciplina.notas.ap3;
 
-      let ap1 = disciplina.notas.ap1;
-      let ap2 = disciplina.notas.ap2;
-      let ap3 = disciplina.notas.ap3;
-
-      if (ap1 && ap2 && ap3) {
+    if (this.isNumber(ap1) && this.isNumber(ap2)) {
+      if (this.isNumber(ap3)) {
         disciplina.notas.mediaFinal = this.notas.mediaFinal(ap1, ap2, ap3);
       }
 
-      if (ap1 && ap2 && !ap3) {
+      if (!this.isNumber(ap3)) {
         disciplina.notas.notaParaAP3 = this.notas.modAP3(ap1, ap2);
       }
+    }
   }
 
   list() {
