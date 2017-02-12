@@ -1,5 +1,10 @@
 # DeVry Calc
 
+[![GitHub issues](https://img.shields.io/github/issues/RodolfoSilva/DeVryCalc.svg)](https://github.com/RodolfoSilva/DeVryCalc/issues)
+[![GitHub stars](https://img.shields.io/github/stars/RodolfoSilva/DeVryCalc.svg)](https://github.com/RodolfoSilva/DeVryCalc/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/RodolfoSilva/DeVryCalc.svg)](https://github.com/RodolfoSilva/DeVryCalc/network)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/RodolfoSilva/DeVryCalc/master/LICENSE)
+
 Calculadora de notas para alunos da DeVry.
 
 # Configurando o Ambiente
