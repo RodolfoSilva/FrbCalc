@@ -38,7 +38,8 @@
     </ion-card-content>
 
     <ion-card-content *ngIf="disciplina.notas.notaParaAP3 !== null && disciplina.notas.notaParaAP3 <= 10" text-center>
-      <div ion-text class="nota" color="primary">{{ disciplina.notas.notaParaAP3 | number: '1.1-1' }}</div>
+      <div ion-text class="nota" color="primary" *ngIf="disciplina.notas.notaParaAP3 < 0 ">0.0</div>
+      <div ion-text class="nota" color="primary" *ngIf="disciplina.notas.notaParaAP3 > 0">{{ disciplina.notas.notaParaAP3 | number: '1.1-1' }}</div>
       <h2 class="titulo">Necessário tirar na AP3</h2>
     </ion-card-content>
 
