@@ -28,7 +28,7 @@ export class Notas {
   }
 
   /**
-   * Faz um calculo da nota que deve ser tirada
+   * Faz um cálculo da nota que deve ser tirada
    *
    * @param {number} ap3 Nota da AP3
    * @param {number} apx Nota da AP1/AP2

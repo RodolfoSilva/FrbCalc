@@ -4,12 +4,6 @@ import { Storage } from '@ionic/storage';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 
-/*
-  Generated class for the Disciplinas provider.
-
-  See https://angular.io/docs/ts/latest/guide/dependency-injection.html
-  for more info on providers and Angular 2 DI.
-*/
 @Injectable()
 export class Disciplinas {
 
@@ -24,6 +18,9 @@ export class Disciplinas {
 
   updateCalcs(disciplina: DisciplinaModel) {
     disciplina.notas.mediaFinal = null;
+
+    disciplina.notas.notaParaAP1 = null;
+    disciplina.notas.notaParaAP2 = null;
     disciplina.notas.notaParaAP3 = null;
 
     let ap1 = disciplina.notas.ap1;
@@ -33,10 +30,24 @@ export class Disciplinas {
     if (this.isNumber(ap1) && this.isNumber(ap2)) {
       if (this.isNumber(ap3)) {
         disciplina.notas.mediaFinal = this.notas.mediaFinal(ap1, ap2, ap3);
+        return;
       }
 
       if (!this.isNumber(ap3)) {
         disciplina.notas.notaParaAP3 = this.notas.modAP3(ap1, ap2);
+        return;
+      }
+    }
+
+    if (this.isNumber(ap3) && (this.isNumber(ap1) || this.isNumber(ap2))) {
+      if (this.isNumber(ap2)) {
+        disciplina.notas.notaParaAP1 = this.notas.previsao(ap3, ap2);
+        return;
+      }
+
+      if (this.isNumber(ap1)) {
+        disciplina.notas.notaParaAP2 = this.notas.previsao(ap3, ap1);
+        return;
       }
     }
   }

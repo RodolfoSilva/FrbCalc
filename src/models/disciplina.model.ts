@@ -3,6 +3,8 @@ class Notas {
   ap2: number;
   ap3: number;
   mediaFinal: number;
+  notaParaAP1: number;
+  notaParaAP2: number;
   notaParaAP3: number;
 
   // get mediaFinal(): number {
