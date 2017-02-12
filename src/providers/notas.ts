@@ -10,7 +10,7 @@ export class Notas {
    *
    * @returns {number}
    */
-  modAP3(ap1: number, ap2: number): number {
+  static modAP3(ap1: number, ap2: number): number {
     return Number(((50 - ((ap1 + ap2) * 3)) / 4).toFixed(1));
   }
 
@@ -23,7 +23,7 @@ export class Notas {
    *
    * @returns {number}
    */
-  mediaFinal(ap1: number, ap2: number, ap3: number): number {
+  static mediaFinal(ap1: number, ap2: number, ap3: number): number {
     return Number(Math.abs(( (ap1 + ap2) * 3 + ap3 * 4 ) / 10).toFixed(1));
   }
 
@@ -35,7 +35,7 @@ export class Notas {
    *
    * @returns {number}
    */
-  previsao(ap3: number, apx: number) {
+  static previsao(ap3: number, apx: number) {
     return Number(((50 - (apx * 3 + ap3 * 4)) / 3).toFixed(1));
   }
 }

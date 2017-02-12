@@ -31,16 +31,16 @@
       </div>
     </ion-card-header>
 
-    <ion-card-content *ngIf="disciplina.notas.mediaFinal !== null" text-center>
-      <div ion-text class="nota" color="secondary" *ngIf="disciplina.notas.mediaFinal >= 5">{{ disciplina.notas.mediaFinal | number: '1.1-1' }}</div>
-      <div ion-text class="nota" color="danger" *ngIf="disciplina.notas.mediaFinal < 5">{{ disciplina.notas.mediaFinal | number: '1.1-1' }}</div>
-      <h2 class="titulo">Média final</h2>
-    </ion-card-content>
+    <ion-card-content text-center>
+      <div *ngIf="disciplina.notas.mediaFinal !== null">
+        <div ion-text class="nota" color="secondary" *ngIf="disciplina.notas.mediaFinal >= 5">{{ disciplina.notas.mediaFinal | number: '1.0-1' }}</div>
+        <div ion-text class="nota" color="danger" *ngIf="disciplina.notas.mediaFinal < 5">{{ disciplina.notas.mediaFinal | number: '1.0-1' }}</div>
+        <h2 class="titulo">Média final</h2>
+      </div>
 
-    <ion-card-content *ngIf="disciplina.notas.notaParaAP3 !== null && disciplina.notas.notaParaAP3 <= 10" text-center>
-      <div ion-text class="nota" color="primary" *ngIf="disciplina.notas.notaParaAP3 < 0 ">0.0</div>
-      <div ion-text class="nota" color="primary" *ngIf="disciplina.notas.notaParaAP3 > 0">{{ disciplina.notas.notaParaAP3 | number: '1.1-1' }}</div>
-      <h2 class="titulo">Necessário tirar na AP3</h2>
+      <app-previsao-nota titulo="Necessário tirar na AP1" [nota]="disciplina.notas.notaParaAP1"></app-previsao-nota>
+      <app-previsao-nota titulo="Necessário tirar na AP2" [nota]="disciplina.notas.notaParaAP2"></app-previsao-nota>
+      <app-previsao-nota titulo="Necessário tirar na AP3" [nota]="disciplina.notas.notaParaAP3"></app-previsao-nota>
     </ion-card-content>
 
     <ion-card-content *ngIf="disciplina.notas.notaParaAP3 > 10" text-center>

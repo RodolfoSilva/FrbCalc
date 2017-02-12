@@ -34,8 +34,6 @@ export class DisciplinaPage {
       ap2: ['', NotaValidator.isValid],
       ap3: ['', NotaValidator.isValid]
     });
-
-    console.log(this.disciplinaForm);
   }
 
   save() {
