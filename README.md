@@ -7,6 +7,8 @@
 
 Calculadora de notas para alunos da DeVry.
 
+[<img src="https://play.google.com/intl/en_us/badges/images/generic/pt-br_badge_web_generic.png" alt="Disponível no Google Play" height="100">](https://play.google.com/store/apps/details?id=com.rodolfosilva.devrycalc) 
+
 # Configurando o Ambiente
 
 * Clone este repositório
@@ -33,9 +35,4 @@ Para compilar a aplicação, é necessário definir qual plataforma será  direc
 ### Gerando o .apk 
 * Execute: <code>ionic run android --device</code>
 Você encontrará o apk em: <pre>platforms/android/build/output/*.apk</pre>
-
-## Android
-
-https://play.google.com/store/apps/details?id=com.rodolfosilva.devrycalc
-
 
