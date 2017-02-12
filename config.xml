@@ -39,7 +39,7 @@
     <allow-intent href="itms-apps:*"/>
   </platform>
   <preference name="StatusBarOverlaysWebView" value="true"/>
-  <preference name="StatusBarBackgroundColor" value="#1976D2"/>
+  <preference name="StatusBarBackgroundColor" value="#00375f"/>
   <preference name="StatusBarStyle" value="lightcontent"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
