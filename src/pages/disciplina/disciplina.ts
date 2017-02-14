@@ -64,16 +64,17 @@ export class DisciplinaPage {
         {
           text: 'Sim',
           handler: () => {
-            this.disciplinasService.remove(this.disciplina).then(() => {
-              let toast = this.toastCtrl.create({
-                message: `A disciplina "${this.disciplina.titulo}" foi excluída!`,
-                duration: 3000
+            this.disciplinasService.remove(this.disciplina)
+              .then(() => {
+                let toast = this.toastCtrl.create({
+                  message: `A disciplina "${this.disciplina.titulo}" foi excluída!`,
+                  duration: 3000
+                });
+
+                toast.present();
+
+                this.navCtrl.pop();
               });
-
-              toast.present();
-
-              this.navCtrl.pop();
-            });
           }
         }
       ]

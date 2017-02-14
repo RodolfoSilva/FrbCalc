@@ -21,7 +21,7 @@ export class Disciplinas {
       });
   }
 
-  remove(disciplina: DisciplinaModel) {
+  remove(disciplina: DisciplinaModel): Promise<boolean> {
     return this.list()
       .then((disciplinas: Array<DisciplinaModel>) => {
         let result = disciplinas.find((item) => item.id === disciplina.id);
@@ -32,7 +32,6 @@ export class Disciplinas {
 
         return this.storage.set('disciplinas', disciplinas);
       });
-
   }
 
   save(disciplina: DisciplinaModel) {
