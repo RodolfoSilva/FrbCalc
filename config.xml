@@ -6,7 +6,6 @@
   <content src="index.html"/>
   <access origin="*"/>
   <allow-navigation href="http://ionic.local/*"/>
-  <allow-navigation href="http://192.168.42.202:8100"/>
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>
   <allow-intent href="tel:*"/>
@@ -62,6 +61,7 @@
   <plugin name="cordova-plugin-console" spec="1.0.5"/>
   <plugin name="cordova-plugin-statusbar" spec="2.2.1"/>
   <plugin name="cordova-plugin-device" spec="1.1.4"/>
+  <plugin name="cordova-plugin-splashscreen" spec="~4.0.1"/>
   <plugin name="cordova-sqlite-storage" spec="~2.0.1"/>
   <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
 </widget>
