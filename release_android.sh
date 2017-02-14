@@ -22,7 +22,7 @@ then
   rm $releaseFile
 fi
 
-echo "cordova build android --release"
+echo "ionic build android --release"
 ionic build android --release --$apkEnv
 
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore key/devry-calc.keystore -storepass 0p9o8i7u -keypass 0p9o8i7u platforms/android/build/outputs/apk/android-release-unsigned.apk devry_calc
