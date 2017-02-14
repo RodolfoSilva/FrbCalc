@@ -4,9 +4,9 @@ export function isNumber(value: any) {
 }
 
 export class NotasModel {
-  ap1: number;
-  ap2: number;
-  ap3: number;
+  ap1: number = null;
+  ap2: number = null;
+  ap3: number = null;
 
 
   set mediaFinal(number: number) { }
@@ -75,7 +75,7 @@ export class NotasModel {
 
 export class DisciplinaModel {
   id: number = Date.now();
-  titulo: string;
+  titulo: string = null;
   notas: NotasModel = new NotasModel();
   created_at: Date;
   updated_at: Date;

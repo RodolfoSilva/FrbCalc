@@ -46,6 +46,6 @@
     </ion-list>
 
     <button ion-button large block type="submit" [disabled]="!disciplinaForm.valid">Salvar</button>
-    <button ion-button large block color="danger" (click)="excluir()" *ngIf="disciplina.updated_at">Apagar</button>
+    <button ion-button large block type="button" color="danger" (click)="excluir()" *ngIf="disciplina.updated_at">Apagar</button>
   </form>
 </ion-content>
