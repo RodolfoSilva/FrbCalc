@@ -3,10 +3,13 @@ import { NotaComponent } from './../pages/home/nota.component';
 import { Notas } from '../providers/notas';
 import { Disciplinas } from './../providers/disciplinas';
 import { DisciplinaPage } from './../pages/disciplina/disciplina';
+import { PagsPage, ionViewDidLoad } from './../pags/pags';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { IonicStorageModule } from '@ionic/storage';
 import { MyApp } from './app.component';
+import { NavParams } from 'ionic-angular';
+import { PopoverController } from 'ionic-angular';
 import { HomePage } from '../pages/home/home';
 
 @NgModule({
