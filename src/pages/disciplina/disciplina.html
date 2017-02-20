@@ -2,13 +2,22 @@
 
   <ion-navbar>
     <ion-title>Disciplina</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only type="button" (click)="excluir()" *ngIf="disciplina.updated_at">
+        <ion-icon name="trash"></ion-icon>
+      </button>
+      <button ion-button icon-only form="disciplinaForm" type="submit" [disabled]="!disciplinaForm.valid">
+        <ion-icon name="checkmark"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <form [formGroup]="disciplinaForm" (ngSubmit)="save()">
+  <form id="disciplinaForm" [formGroup]="disciplinaForm" (ngSubmit)="save()">
     <ion-list>
 
       <ion-item no-padding>
@@ -44,8 +53,5 @@
       </ion-item>
 
     </ion-list>
-
-    <button ion-button large block type="submit" [disabled]="!disciplinaForm.valid">Salvar</button>
-    <button ion-button large block type="button" color="danger" (click)="excluir()" *ngIf="disciplina.updated_at">Apagar</button>
   </form>
 </ion-content>
