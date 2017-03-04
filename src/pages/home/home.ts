@@ -2,6 +2,7 @@ import { DisciplinaModel } from './../../models/disciplina.model';
 import { Notas } from '../../providers/notas';
 import { Disciplinas } from './../../providers/disciplinas';
 import { DisciplinaPage } from './../disciplina/disciplina';
+import { Popover } from 'ionic-angular'
 import { PopoverController} from 'ionic-angular';
 import { MenuPage } from './../menu/menu';
 import { Component } from '@angular/core';
