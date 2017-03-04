@@ -3,6 +3,7 @@ import { NotaComponent } from './../pages/home/nota.component';
 import { Notas } from '../providers/notas';
 import { Disciplinas } from './../providers/disciplinas';
 import { DisciplinaPage } from './../pages/disciplina/disciplina';
+import { MenuPage } from './../pages/menu/menu'
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { IonicStorageModule } from '@ionic/storage';
@@ -14,6 +15,7 @@ import { HomePage } from '../pages/home/home';
     MyApp,
     HomePage,
     DisciplinaPage,
+    MenuPage,
     NotaComponent,
     PrevisaoNotaComponent
   ],
@@ -25,7 +27,8 @@ import { HomePage } from '../pages/home/home';
   entryComponents: [
     MyApp,
     HomePage,
-    DisciplinaPage
+    DisciplinaPage,
+    MenuPage
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},
