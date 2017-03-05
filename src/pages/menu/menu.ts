@@ -1,21 +1,28 @@
+import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
-import { ViewController, Popover } from 'ionic-angular';
+import { ViewController, NavController } from 'ionic-angular';
 
-/*
-  Generated class for the Menu page.
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-menu',
   templateUrl: 'menu.html'
 })
-
 export class MenuPage {
+  options: Array<{ component: Component, title: string }>;
 
-  constructor(public viewCtrl: ViewController) {}
-      close() {
-        this.viewCtrl.dismiss();
-      }
+  constructor(public viewCtrl: ViewController, public navCtrl: NavController) {
+    this.options = [
+      { component: HomePage, title: 'Ionic 2' },
+      { component: HomePage, title: 'Angular 2' },
+    ]
+  }
+
+  goToPage(page: Component) {
+    this.navCtrl.push(page);
+    this.close();
+  }
+
+  close() {
+    this.viewCtrl.dismiss();
+  }
 }
