@@ -1,4 +1,4 @@
-import { HomePage } from './../home/home';
+import { SobrePage } from './../sobre/sobre';
 import { Component } from '@angular/core';
 import { ViewController, NavController } from 'ionic-angular';
 
@@ -12,8 +12,7 @@ export class MenuPage {
 
   constructor(public viewCtrl: ViewController, public navCtrl: NavController) {
     this.options = [
-      { component: HomePage, title: 'Ionic 2' },
-      { component: HomePage, title: 'Angular 2' },
+      { component: SobrePage, title: 'Sobre o projeto' },
     ]
   }
 
