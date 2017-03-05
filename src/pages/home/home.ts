@@ -2,7 +2,6 @@ import { DisciplinaModel } from './../../models/disciplina.model';
 import { Notas } from '../../providers/notas';
 import { Disciplinas } from './../../providers/disciplinas';
 import { DisciplinaPage } from './../disciplina/disciplina';
-import { Popover } from 'ionic-angular'
 import { PopoverController} from 'ionic-angular';
 import { MenuPage } from './../menu/menu';
 import { Component } from '@angular/core';
@@ -24,10 +23,10 @@ export class HomePage {
     public notas: Notas
   ) {}
 
-  openMenu(myEvent) {
+  openMenu(event: MouseEvent) {
     let popover = this.popoverCtrl.create(MenuPage);
     popover.present({
-      ev: myEvent
+      ev: event
     });
   }
 
