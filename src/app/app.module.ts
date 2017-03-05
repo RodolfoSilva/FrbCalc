@@ -5,7 +5,7 @@ import { Disciplinas } from './../providers/disciplinas';
 import { DisciplinaPage } from './../pages/disciplina/disciplina';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { Storage } from '@ionic/storage';
+import { IonicStorageModule } from '@ionic/storage';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
@@ -18,7 +18,8 @@ import { HomePage } from '../pages/home/home';
     PrevisaoNotaComponent
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -26,6 +27,10 @@ import { HomePage } from '../pages/home/home';
     HomePage,
     DisciplinaPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Disciplinas, Storage, Notas]
+  providers: [
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Disciplinas,
+    Notas
+  ]
 })
 export class AppModule {}
