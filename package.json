@@ -7,7 +7,10 @@
     "clean": "ionic-app-scripts clean",
     "build": "ionic-app-scripts build",
     "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve"
+    "ionic:serve": "ionic-app-scripts serve",
+    "test": "ng test",
+    "test-coverage": "ng test --code-coverage",
+    "test-ci": "ng test --watch=false --code-coverage"
   },
   "dependencies": {
     "@angular/common": "2.4.8",
@@ -28,7 +31,19 @@
     "zone.js": "0.7.2"
   },
   "devDependencies": {
+    "@angular/cli": "^1.0.0-rc.1",
+    "@angular/router": "^3.4.9",
     "@ionic/app-scripts": "^1.1.4",
+    "@types/jasmine": "2.5.41",
+    "@types/node": "^7.0.5",
+    "jasmine-core": "^2.5.2",
+    "jasmine-spec-reporter": "^3.2.0",
+    "karma": "^1.5.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-cli": "^1.0.1",
+    "karma-coverage-istanbul-reporter": "^0.3.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
     "typescript": "2.0.10"
   },
   "cordovaPlugins": [
