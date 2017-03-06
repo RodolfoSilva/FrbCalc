@@ -4,6 +4,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/RodolfoSilva/DeVryCalc.svg)](https://github.com/RodolfoSilva/DeVryCalc/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/RodolfoSilva/DeVryCalc.svg)](https://github.com/RodolfoSilva/DeVryCalc/network)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/RodolfoSilva/DeVryCalc/master/LICENSE)
+[![Build Status](https://travis-ci.org/RodolfoSilva/DeVryCalc.svg?branch=master)](https://travis-ci.org/RodolfoSilva/DeVryCalc)
 
 Calculadora de notas para alunos da DeVry.
 
