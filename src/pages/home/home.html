@@ -3,9 +3,13 @@
     <ion-title>
       Calculadora DeVry
     </ion-title>
+     <ion-buttons end>
+      <a ion-button icon-only (click)="openMenu($event)">
+      <ion-icon name="more"></ion-icon>
+    </a>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
-
 <ion-content>
   <ion-fab right bottom>
     <button ion-fab (click)="create()"><ion-icon name="add"></ion-icon></button>
