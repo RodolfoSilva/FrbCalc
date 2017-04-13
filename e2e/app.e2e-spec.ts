@@ -1,12 +1,12 @@
 import { browser, element, by } from 'protractor';
 
-describe('MyApp', () => {
+describe('DeVry Calc', () => {
 
   beforeEach(() => {
     browser.get('');
   });
 
-  it('should have a title', () => {
+  it('Deve ter o titulo do aplicativo', () => {
     expect(browser.getTitle()).toEqual('Calculadora DeVry');
   });
 })

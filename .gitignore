@@ -21,6 +21,7 @@ yarn.lock
 .sass-cache/
 .tmp/
 .versions/
+REPORTS/
 coverage/
 dist/
 node_modules/

@@ -3,16 +3,14 @@
     <ion-title>
       Calculadora DeVry
     </ion-title>
-     <ion-buttons end>
-      <a ion-button icon-only (click)="openMenu($event)">
-      <ion-icon name="more"></ion-icon>
-    </a>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openMenu($event)" type="button"><ion-icon name="more"></ion-icon></button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 <ion-content>
   <ion-fab right bottom>
-    <button ion-fab (click)="create()"><ion-icon name="add"></ion-icon></button>
+    <button ion-fab (click)="create()" type="button"><ion-icon name="add"></ion-icon></button>
   </ion-fab>
 
   <ion-grid class="empty" *ngIf="!disciplinas || !disciplinas.length">
@@ -20,7 +18,9 @@
       <ion-col>
         <ion-icon name="ios-list-box-outline"></ion-icon>
         <h1>Sem disciplinas cadastradas</h1>
-        <p>Para adicionar uma disciplina, aperte em <ion-icon name="add-circle"></ion-icon></p>
+        <p>Para adicionar uma disciplina, aperte em
+          <ion-icon name="add-circle"></ion-icon>
+        </p>
       </ion-col>
     </ion-row>
   </ion-grid>

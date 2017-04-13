@@ -1,3 +1,4 @@
+import { ShowControlErrors } from './../components/show-control-errors/show-control-errors';
 import { PrevisaoNotaComponent } from './../pages/home/previsao-nota.component';
 import { NotaComponent } from './../pages/home/nota.component';
 import { Notas } from '../providers/notas';
@@ -19,6 +20,7 @@ import { HomePage } from '../pages/home/home';
     MenuPage,
     SobrePage,
     NotaComponent,
+    ShowControlErrors,
     PrevisaoNotaComponent
   ],
   imports: [
