@@ -8,7 +8,7 @@ import { ViewController, NavController } from 'ionic-angular';
   templateUrl: 'menu.html'
 })
 export class MenuPage {
-  options: Array<{ component: Component, title: string }>;
+  options: Array<{ component: any, title: string }>;
 
   constructor(public viewCtrl: ViewController, public navCtrl: NavController) {
     this.options = [
@@ -16,7 +16,7 @@ export class MenuPage {
     ]
   }
 
-  goToPage(page: Component) {
+  goToPage(page: any) {
     this.navCtrl.push(page);
     this.close();
   }
