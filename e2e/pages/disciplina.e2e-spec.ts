@@ -1,4 +1,4 @@
-import { browser, element, by, ElementFinder } from 'protractor';
+import { browser, element, by } from 'protractor';
 
 describe('Disciplina', () => {
   beforeEach(() => {
@@ -14,19 +14,23 @@ describe('Disciplina', () => {
   });
 
   it('Validação do nome da disciplina', () => {
-    let disciplina = element(by.css(`#disciplinaForm > ion-list > ion-item:nth-child(1) > div.item-inner > div > ion-input > input`));
+    let disciplina = element(by.xpath(`//*[@id="disciplinaForm"]/ion-list//input[@name="titulo"]`));
     disciplina.sendKeys();
     disciplina.click();
     element(by.css('body')).click();
-    expect(element(by.css(`#disciplinaForm > ion-list > ion-item:nth-child(2)`)).isDisplayed()).toBeTruthy();
-    expect(element(by.css(`#disciplinaForm > ion-list > ion-item:nth-child(2) > div.item-inner > div > ion-label > p`)).getText()).toContain('Insira o nome da disciplina');
+    let elem = element(by.css(`#disciplinaForm > ion-list > .form-errors:nth-child(2)`));
+    expect(elem.isDisplayed()).toBeTruthy();
+    expect(elem.getText()).toContain('Insira o nome da disciplina');
   });
 
   it('Validação das notas do formulário', () => {
-    [2, 4, 6].forEach((i) => {
-      element(by.css(`#disciplinaForm > ion-list > ion-item:nth-child(${i}) > div.item-inner > div > ion-input > input`)).sendKeys(25);
-      expect(element(by.css(`#disciplinaForm > ion-list > ion-item:nth-child(${i+1})`)).isDisplayed()).toBeTruthy();
-      expect(element(by.css(`#disciplinaForm > ion-list > ion-item:nth-child(${i+1}) > div.item-inner > div > ion-label > p`)).getText()).toContain('Nota inválida, insira uma nota entre 0.1 e 10');
+    [1, 2, 3].forEach((i) => {
+      element(by.xpath(`//*[@id="disciplinaForm"]/ion-list//input[@name="ap${i}"]`)).sendKeys(25);
+      let elem = element(by.xpath(`//*[@id="disciplinaForm"]/ion-list//*[contains(@class, 'form-errors')][${i+1}]`));
+      expect(elem.isDisplayed()).toBeTruthy();
+      expect(elem.getText()).toContain('Nota inválida, insira uma nota entre 0.1 e 10');
     });
   });
-})
+});
+
+

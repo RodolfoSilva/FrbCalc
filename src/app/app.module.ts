@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { IonicStorageModule } from '@ionic/storage';
 
+import { ShowControlErrors } from './../components/show-control-errors/show-control-errors';
 import { PrevisaoNotaComponent } from './../pages/home/previsao-nota.component';
 import { NotaComponent } from './../pages/home/nota.component';
 import { Notas } from '../providers/notas';
@@ -24,6 +25,7 @@ import { HomePage } from '../pages/home/home';
     MenuPage,
     SobrePage,
     NotaComponent,
+    ShowControlErrors,
     PrevisaoNotaComponent
   ],
   imports: [
