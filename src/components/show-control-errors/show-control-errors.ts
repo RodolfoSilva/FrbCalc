@@ -5,7 +5,7 @@ import { Directive, DoCheck, Input, KeyValueDiffer, KeyValueDiffers, ElementRef,
   selector: '[show-control-errors]' // Attribute selector
 })
 export class ShowControlErrors implements DoCheck {
-  private _differ: KeyValueDiffer;
+  private _differ: KeyValueDiffer<any, any>;
   private _control: AbstractControl;
 
   constructor(
