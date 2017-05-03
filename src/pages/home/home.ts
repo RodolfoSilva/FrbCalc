@@ -1,13 +1,10 @@
+import { Component } from '@angular/core';
+import { IonicPage, NavController, PopoverController } from 'ionic-angular';
 import { DisciplinaModel } from './../../models/disciplina.model';
 import { Notas } from '../../providers/notas';
 import { Disciplinas } from './../../providers/disciplinas';
-import { DisciplinaPage } from './../disciplina/disciplina';
-import { PopoverController} from 'ionic-angular';
-import { MenuPage } from './../menu/menu';
-import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
-
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -24,7 +21,7 @@ export class HomePage {
   ) {}
 
   openMenu(event: MouseEvent) {
-    let popover = this.popoverCtrl.create(MenuPage);
+    let popover = this.popoverCtrl.create('MenuPage');
     popover.present({
       ev: event
     });
@@ -40,11 +37,11 @@ export class HomePage {
   }
 
   edit(disciplina) {
-    this.navCtrl.push(DisciplinaPage, {disciplina});
+    this.navCtrl.push('DisciplinaPage', {disciplina});
   }
 
   create() {
-    this.navCtrl.push(DisciplinaPage);
+    this.navCtrl.push('DisciplinaPage');
   }
 
 }
