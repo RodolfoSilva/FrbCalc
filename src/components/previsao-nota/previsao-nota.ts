@@ -1,7 +1,8 @@
 import { Component, Input } from '@angular/core';
 
+
 @Component({
-  selector: 'app-previsao-nota',
+  selector: 'previsao-nota',
   template: `
   <div *ngIf="nota !== null && nota <= 10" text-center>
     <div ion-text class="nota" color="primary" *ngIf="nota < 0 ">0</div>
@@ -10,7 +11,7 @@ import { Component, Input } from '@angular/core';
   </div>
   `
 })
-export class PrevisaoNotaComponent {
+export class PrevisaoNota {
   @Input('titulo') titulo: string;
   @Input('nota') nota: number;
   @Input('media') media: number = 5;

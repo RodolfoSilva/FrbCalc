@@ -1,10 +1,11 @@
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AlertController, NavController, NavParams, ToastController, IonicPage } from 'ionic-angular';
 import { NotaValidator } from './../../validators/nota';
 import { DisciplinaModel } from './../../models/disciplina.model';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Disciplinas } from './../../providers/disciplinas';
-import { Component } from '@angular/core';
-import { AlertController, NavController, NavParams, ToastController } from 'ionic-angular';
 
+@IonicPage()
 @Component({
   selector: 'page-disciplina',
   templateUrl: 'disciplina.html'

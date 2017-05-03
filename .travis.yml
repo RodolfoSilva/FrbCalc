@@ -8,6 +8,11 @@ dist: trusty
 notifications:
   email: tru
 
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
 addons:
   apt:
     sources:
