@@ -9,7 +9,7 @@
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve",
     "e2e": "webdriver-manager update --standalone false --gecko false; ionic-app-scripts build; protractor",
-    "postinstall": "ionic state restore && webdriver-manager update",
+    "postinstall": "webdriver-manager update",
     "test": "ng test",
     "test-coverage": "ng test --code-coverage",
     "test-ci": "ng test --single-run --watch=false --code-coverage"
