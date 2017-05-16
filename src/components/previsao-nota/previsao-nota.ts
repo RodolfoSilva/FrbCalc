@@ -19,7 +19,7 @@ export class PrevisaoNota {
   colors = {
     low: '#f53d3d',
     high: '#32db64'
-  }
+  };
 
   ngOnInit() {
 
