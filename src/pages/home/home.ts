@@ -21,7 +21,7 @@ export class HomePage {
   ) {}
 
   openMenu(event: MouseEvent) {
-    let popover = this.popoverCtrl.create('MenuPage');
+    const popover = this.popoverCtrl.create('MenuPage');
     popover.present({
       ev: event
     });

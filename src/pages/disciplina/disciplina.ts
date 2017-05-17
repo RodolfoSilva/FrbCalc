@@ -44,7 +44,7 @@ export class DisciplinaPage {
         message = `A disciplina "${this.disciplina.titulo}" foi criada!`;
       }
 
-      let toast = this.toastCtrl.create({
+      const toast = this.toastCtrl.create({
         message: message,
         duration: 3000
       });
@@ -55,7 +55,7 @@ export class DisciplinaPage {
   }
 
   excluir() {
-    let confirm = this.alertCtrl.create({
+    const confirm = this.alertCtrl.create({
       title: 'Apagar disciplina',
       message: `Você tem certeza que deseja apagar a disciplina "${this.disciplina.titulo}"?`,
       buttons: [
@@ -67,7 +67,7 @@ export class DisciplinaPage {
           handler: () => {
             this.disciplinasService.remove(this.disciplina)
               .then(() => {
-                let toast = this.toastCtrl.create({
+                const toast = this.toastCtrl.create({
                   message: `A disciplina "${this.disciplina.titulo}" foi excluída!`,
                   duration: 3000
                 });
