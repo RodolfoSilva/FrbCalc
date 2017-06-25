@@ -3,20 +3,24 @@
     <ion-title>
       Calculadora DeVry
     </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="openMenu($event)" type="button"><ion-icon name="more"></ion-icon></button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
-
 <ion-content>
   <ion-fab right bottom>
-    <button ion-fab (click)="create()"><ion-icon name="add"></ion-icon></button>
+    <button ion-fab (click)="create()" type="button"><ion-icon name="add"></ion-icon></button>
   </ion-fab>
 
   <ion-grid class="empty" *ngIf="!disciplinas || !disciplinas.length">
-    <ion-row center>
+    <ion-row align-items-center>
       <ion-col>
         <ion-icon name="ios-list-box-outline"></ion-icon>
         <h1>Sem disciplinas cadastradas</h1>
-        <p>Para adicionar uma disciplina, aperte em <ion-icon name="add-circle"></ion-icon></p>
+        <p>Para adicionar uma disciplina, aperte em
+          <ion-icon name="add-circle"></ion-icon>
+        </p>
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -38,9 +42,9 @@
         <h2 class="titulo">Média final</h2>
       </div>
 
-      <app-previsao-nota titulo="Necessário tirar na AP1" [nota]="disciplina.notas.notaParaAP1"></app-previsao-nota>
-      <app-previsao-nota titulo="Necessário tirar na AP2" [nota]="disciplina.notas.notaParaAP2"></app-previsao-nota>
-      <app-previsao-nota titulo="Necessário tirar na AP3" [nota]="disciplina.notas.notaParaAP3"></app-previsao-nota>
+      <previsao-nota titulo="Necessário tirar na AP1" [nota]="disciplina.notas.notaParaAP1"></previsao-nota>
+      <previsao-nota titulo="Necessário tirar na AP2" [nota]="disciplina.notas.notaParaAP2"></previsao-nota>
+      <previsao-nota titulo="Necessário tirar na AP3" [nota]="disciplina.notas.notaParaAP3"></previsao-nota>
     </ion-card-content>
 
     <ion-card-content *ngIf="disciplina.notas.notaParaAP3 > 10" text-center>
@@ -49,13 +53,13 @@
 
     <ion-row *ngIf="disciplina.notas.ap1 !== null || disciplina.notas.ap2 !== null || disciplina.notas.ap3 !== null">
       <ion-col center text-center>
-        <app-nota item-left ion-text titulo="AP1" [nota]="disciplina.notas.ap1"></app-nota>
+        <nota item-left ion-text titulo="AP1" [nota]="disciplina.notas.ap1"></nota>
       </ion-col>
       <ion-col center text-center>
-        <app-nota item-left ion-text titulo="AP2" [nota]="disciplina.notas.ap2"></app-nota>
+        <nota item-left ion-text titulo="AP2" [nota]="disciplina.notas.ap2"></nota>
       </ion-col>
       <ion-col center text-center>
-        <app-nota item-left ion-text titulo="AP3" [nota]="disciplina.notas.ap3"></app-nota>
+        <nota item-left ion-text titulo="AP3" [nota]="disciplina.notas.ap3"></nota>
       </ion-col>
     </ion-row>
   </ion-card>

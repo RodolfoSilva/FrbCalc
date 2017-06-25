@@ -1,31 +1,32 @@
-import { PrevisaoNotaComponent } from './../pages/home/previsao-nota.component';
-import { NotaComponent } from './../pages/home/nota.component';
-import { Notas } from '../providers/notas';
-import { Disciplinas } from './../providers/disciplinas';
-import { DisciplinaPage } from './../pages/disciplina/disciplina';
-import { NgModule, ErrorHandler } from '@angular/core';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { Storage } from '@ionic/storage';
+import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+import { ErrorHandler, NgModule } from '@angular/core';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar';
+import { IonicStorageModule } from '@ionic/storage';
+import { ProvidersModule } from './../providers/providers.module';
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    DisciplinaPage,
-    NotaComponent,
-    PrevisaoNotaComponent
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    BrowserModule,
+    IonicModule.forRoot(MyApp),
+    CommonModule,
+    ProvidersModule,
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    DisciplinaPage
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}, Disciplinas, Storage, Notas]
+  providers: [
+    StatusBar,
+    SplashScreen,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+  ]
 })
 export class AppModule {}

@@ -12,7 +12,7 @@ export class Disciplinas {
     public notas: Notas
   ) {}
 
-  list() {
+  list(): Promise<any>  {
     return this.storage.get('disciplinas')
       .then((disciplinas) => {
         disciplinas = disciplinas || [];

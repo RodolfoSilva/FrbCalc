@@ -1,6 +1,10 @@
 # Specifies intentionally untracked files to ignore when using Git
 # http://git-scm.com/docs/gitignore
 
+# e2e
+/e2e/*.js
+/e2e/*.map
+
 *~
 *.sw[mnpcod]
 *.log
@@ -11,11 +15,13 @@ log.txt
 *.sublime-workspace
 .vscode/
 npm-debug.log*
+yarn.lock
 
 .idea/
 .sass-cache/
 .tmp/
 .versions/
+REPORTS/
 coverage/
 dist/
 node_modules/
