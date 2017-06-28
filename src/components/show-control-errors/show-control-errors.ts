@@ -2,7 +2,7 @@ import { AbstractControl } from '@angular/forms';
 import { Directive, DoCheck, Input, KeyValueDiffer, KeyValueDiffers, ElementRef, Renderer } from '@angular/core';
 
 @Directive({
-  selector: '[show-control-errors]' // Attribute selector
+  selector: '[show-control-errors]'
 })
 export class ShowControlErrors implements DoCheck {
   private _differ: KeyValueDiffer<any, any>;
@@ -12,7 +12,7 @@ export class ShowControlErrors implements DoCheck {
     private _differs: KeyValueDiffers,
     private _elementRef: ElementRef,
     private _renderer: Renderer
-  ) {}
+  ) { }
 
   @Input('show-control-errors')
   set showControlErrors(control: AbstractControl) {
@@ -35,11 +35,11 @@ export class ShowControlErrors implements DoCheck {
   }
 
   applyChanges() {
-    if (this._control.invalid  && (this._control.dirty || this._control.touched)) {
-      this._renderer.setElementAttribute(this._elementRef.nativeElement, 'hidden', null);
-    } else {
-      this._renderer.setElementAttribute(this._elementRef.nativeElement, 'hidden', '');
+    let attributeValue = '';
+    if (this._control.invalid && (this._control.dirty || this._control.touched)) {
+      attributeValue = null;
     }
+    this._renderer.setElementAttribute(this._elementRef.nativeElement, 'hidden', attributeValue);
   }
 
 }
