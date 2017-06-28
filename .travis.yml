@@ -39,6 +39,7 @@ before_script:
 
 script:
   - npm run test-ci  # unit tests
+  - npm rebuild node-sass
   - npm run e2e      # run e2e tests against ionic
 
 after_success:
