@@ -34,9 +34,9 @@ addons:
 before_install:
   - nvm install --lts
   - node --version
-  - npm install -g cordova@6.4.0 ionic@3.2.0 chromedriver@latest
+  - npm install -g yarn@latest cordova@6.4.0 ionic@3.2.0
 
-install: npm install
+install: yarn
 
 before_script:
   - export DISPLAY=:99.0
