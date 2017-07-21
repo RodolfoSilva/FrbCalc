@@ -18,7 +18,7 @@ Calculadora de notas para alunos da DeVry.
   <code>npm install -g ionic</code> para o Ionic
 * Instale os pacotes do npm com o comando <code>npm install</code> 
 
-# Rodando o DeVry Calc!
+# Rodando o DeVry Calc
 
 * Para reproduzir o app localmente, digite <code>ionic serve</code>
 
