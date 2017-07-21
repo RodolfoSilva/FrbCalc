@@ -42,9 +42,9 @@
         <h2 class="titulo">Média final</h2>
       </div>
 
-      <previsao-nota *ngIf="disciplina.notas.notaParaAP1 > 0" titulo="Necessário tirar na AP1" [nota]="disciplina.notas.notaParaAP1"></previsao-nota>
-      <previsao-nota *ngIf="disciplina.notas.notaParaAP2 > 0" titulo="Necessário tirar na AP2" [nota]="disciplina.notas.notaParaAP2"></previsao-nota>
-      <previsao-nota *ngIf="disciplina.notas.notaParaAP3 > 0" titulo="Necessário tirar na AP3" [nota]="disciplina.notas.notaParaAP3"></previsao-nota>
+      <previsao-nota titulo="Necessário tirar na AP1" [nota]="disciplina.notas.notaParaAP1"></previsao-nota>
+      <previsao-nota titulo="Necessário tirar na AP2" [nota]="disciplina.notas.notaParaAP2"></previsao-nota>
+      <previsao-nota titulo="Necessário tirar na AP3" [nota]="disciplina.notas.notaParaAP3"></previsao-nota>
     </ion-card-content>
 
     <ion-card-content class="titulo" *ngIf="disciplina.notas.notaParaAP3 > 10 || disciplina.notas.notaParaAP2 > 10 || disciplina.notas.notaParaAP1 > 10" text-center>
