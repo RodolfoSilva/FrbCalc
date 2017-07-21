@@ -50,8 +50,9 @@
     <ion-card-content class="titulo" *ngIf="disciplina.notas.notaParaAP3 > 10 || disciplina.notas.notaParaAP2 > 10 || disciplina.notas.notaParaAP1 > 10" text-center>
       Não foi dessa vez, sorte na próxima....
     </ion-card-content>
-    <ion-card-content class="titulo" *ngIf="disciplina.notas.notaParaAP3 < 0 || disciplina.notas.notaParaAP2 < 0 || disciplina.notas.notaParaAP1 < 0" text-center>
-      Parabéns, já está passado.
+    <ion-card-content *ngIf="disciplina.notas.notaParaAP3 < 0 || disciplina.notas.notaParaAP2 < 0 || disciplina.notas.notaParaAP1 < 0" text-center>
+      <p class="titulo">Parabéns, já está passado.</p>
+      <p class="titulo" [hidden]="!(disciplina.notas.notaParaAP3 < 0)">Mas lembre-se que não pode zerar a AP3</p>
     </ion-card-content>
 
     <ion-row *ngIf="disciplina.notas.ap1 !== null || disciplina.notas.ap2 !== null || disciplina.notas.ap3 !== null">
