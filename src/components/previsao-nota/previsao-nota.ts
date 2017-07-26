@@ -6,7 +6,6 @@ import { ColorForNotes } from '../../enums/colors-for-notes';
   selector: 'previsao-nota',
   template: `
   <div *ngIf="nota !== null && nota <= 10 && nota > 0" text-center>
-    <div ion-text class="nota" color="primary" *ngIf="nota < 0 ">0</div>
     <div ion-text class="nota" color="primary" *ngIf="nota > 0">{{ nota | number: '1.0-1' }}</div>
     <h2 class="titulo">{{ titulo }}</h2>
   </div>
