@@ -10,7 +10,7 @@ Calculadora de notas para alunos da DeVry.
 
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/pt-br_badge_web_generic.png" alt="Disponível no Google Play" height="100">](https://play.google.com/store/apps/details?id=com.rodolfosilva.devrycalc) 
 
-# Configurando o Ambiente
+## Configurando o Ambiente
 
 * Clone este repositório
 * Na pasta do repositório (que foi clonada), instale o Cordova e o Ionic:
@@ -18,11 +18,11 @@ Calculadora de notas para alunos da DeVry.
   <code>npm install -g ionic</code> para o Ionic
 * Instale os pacotes do npm com o comando <code>npm install</code> 
 
-# Rodando o DeVry Calc
+## Rodando o DeVry Calc
 
 * Para reproduzir o app localmente, digite <code>ionic serve</code>
 
-# Compilando (WIP)
+## Compilando (WIP)
 Para compilar a aplicação, é necessário definir qual plataforma será  direcionada. Temos duas opções: Android e iOS. Os dois possuem comandos semelhantes.
 
 ### Adicionando a plataforma
@@ -36,4 +36,30 @@ Para compilar a aplicação, é necessário definir qual plataforma será  direc
 ### Gerando o .apk 
 * Execute: <code>ionic run android --device</code>
 Você encontrará o apk em: <pre>platforms/android/build/output/*.apk</pre>
+
+## Mantenedores
+<table>
+  <tbody>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/RodolfoSilva">
+          <img width="150" height="150" src="https://github.com/rodolfosilva.png?v=3&s=150">
+          <br>
+          <strong>Rodolfo Silva</strong>
+        </a>
+        <br>
+        Criador
+      </td>
+      <td align="center">
+        <a href="https://github.com/vaporwavie">
+          <img width="150" height="150" src="https://github.com/vaporwavie.png?v=3&s=150">
+          </br>
+          <strong>Luiz Nickel</strong>
+        </a>
+        <br>
+        Colaborador
+      </td>
+    </tr>
+  <tbody>
+</table>
 
