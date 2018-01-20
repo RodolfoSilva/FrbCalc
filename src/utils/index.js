@@ -1,5 +1,8 @@
 import isString from 'lodash/isString'
 import fromPairs from 'lodash/fromPairs'
+import * as NotasCalc from './notas'
+
+export const NotasCalculator = NotasCalc
 
 export const parseObjectValuesToFloat = (object) => {
   const entries = Object.entries(object)
