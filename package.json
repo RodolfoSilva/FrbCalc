@@ -27,6 +27,9 @@
     "babel-eslint": "^8.2.1",
     "babel-jest": "22.0.3",
     "babel-preset-react-native": "^4.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.0",
     "eslint": "^4.16.0",
     "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-config-standard-react": "^5.0.0",
@@ -38,6 +41,7 @@
     "eslint-plugin-react-native": "^3.2.1",
     "eslint-plugin-standard": "^3.0.1",
     "jest": "22.0.3",
+    "react-dom": "^16.2.0",
     "react-test-renderer": "16.0.0",
     "redux-devtools-extension": "^2.13.2"
   },
@@ -45,6 +49,12 @@
     "preset": "react-native",
     "transformIgnorePatterns": [
       "node_modules/(?!react-native|react-navigation)/"
+    ],
+    "setupFiles": [
+      "<rootDir>/src/setupTests.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
     ]
   }
 }
