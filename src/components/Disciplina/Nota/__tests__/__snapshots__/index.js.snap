@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Renderiza o titulo e no lugar da nota coloca _._ 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#AAA",
+          "fontSize": 36,
+          "fontWeight": "300",
+        },
+        undefined,
+      ]
+    }
+  >
+    _._
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#AAA",
+          "fontSize": 14,
+          "fontWeight": "500",
+        },
+        undefined,
+      ]
+    }
+  >
+    AP1
+  </Text>
+</View>
+`;
+
+exports[`Card Renderiza o titulo e se a nota for null no lugar dela coloca _._ 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#AAA",
+          "fontSize": 36,
+          "fontWeight": "300",
+        },
+        undefined,
+      ]
+    }
+  >
+    _._
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#AAA",
+          "fontSize": 14,
+          "fontWeight": "500",
+        },
+        undefined,
+      ]
+    }
+  >
+    AP1
+  </Text>
+</View>
+`;
+
+exports[`Card renderiza a nota do usuário 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#AAA",
+          "fontSize": 36,
+          "fontWeight": "300",
+        },
+        undefined,
+      ]
+    }
+  >
+    5
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "color": "#AAA",
+          "fontSize": 14,
+          "fontWeight": "500",
+        },
+        undefined,
+      ]
+    }
+  >
+    AP1
+  </Text>
+</View>
+`;

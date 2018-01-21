@@ -13,7 +13,7 @@ let HomeScreen = ({ disciplinas, navigation }) => (
       data={Object.values(disciplinas)}
       keyExtractor={(item) => item.id}
       style={styles.list}
-      renderItem={({ item }) => <Disciplina onClick={(id) => navigation.navigate('Disciplina', { disciplina: item })} {...item} />}
+      renderItem={({ item }) => <Disciplina onPress={(id) => navigation.navigate('Disciplina', { disciplina: item })} {...item} />}
     />
 
     <TouchableOpacity style={styles.addButton} onPress={() => navigation.navigate('DisciplinaAdd')}>

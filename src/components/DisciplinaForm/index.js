@@ -9,7 +9,7 @@ class DisciplinaForm extends Component {
   static propTypes = {
     initialState: PropTypes.object,
     onSubmit: PropTypes.func.isRequired,
-    style: PropTypes.object
+    style: View.propTypes.style
   }
 
   constructor(props) {
@@ -18,7 +18,6 @@ class DisciplinaForm extends Component {
     this.onBlur = this.onBlur.bind(this)
     this.onFocus = this.onFocus.bind(this)
     this.doSubmit = this.doSubmit.bind(this)
-    this.onChangeText = this.onChangeText.bind(this)
 
     this.tituloRef = this.updateRef.bind(this, 'titulo')
     this.ap1Ref = this.updateRef.bind(this, 'ap1')
