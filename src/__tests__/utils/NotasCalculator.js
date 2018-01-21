@@ -1,4 +1,4 @@
-import { NotasCalculator } from '../../src/utils'
+import { NotasCalculator } from '../../utils'
 
 describe('NotasCalculator', () => {
   describe('Método modAP3', () => {

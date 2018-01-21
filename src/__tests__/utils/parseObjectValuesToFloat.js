@@ -1,4 +1,4 @@
-import { parseObjectValuesToFloat } from '../../src/utils'
+import { parseObjectValuesToFloat } from '../../utils'
 
 
 describe('parseObjectValuesToFloat', () => {

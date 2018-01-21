@@ -3,7 +3,7 @@ import { View, Button, TouchableOpacity } from 'react-native'
 import { connect } from 'react-redux'
 import Icon from 'react-native-vector-icons/Ionicons'
 import DisciplinaForm from '../../components/DisciplinaForm'
-import { addDisciplina } from '../../actions/disciplinas'
+import { addDisciplina } from '../../actions/DisciplinaActions'
 import styles from './styles'
 
 class DisciplinaScreen extends Component {
