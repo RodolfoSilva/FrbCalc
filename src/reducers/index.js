@@ -1,7 +1,7 @@
 import FilesystemStorage from 'redux-persist-filesystem-storage';
 import { persistCombineReducers } from 'redux-persist';
 
-import { disciplinas } from './disciplinas';
+import disciplinas from './disciplinas';
 
 const config = { key: 'root', storage: FilesystemStorage };
 
