@@ -1,4 +1,4 @@
-import * as NotasCalc from './notas'
+import * as NotasCalculator from './NotasCalculator'
 export { parseObjectValuesToFloat } from './parseObjectValuesToFloat'
 
-export const NotasCalculator = NotasCalc
+export { NotasCalculator }
