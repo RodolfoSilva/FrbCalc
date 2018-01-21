@@ -1,4 +1,3 @@
-import React from 'react'
 import { StackNavigator } from 'react-navigation'
 import { colors } from '../styles'
 import HomeScreen from './HomeScreen'

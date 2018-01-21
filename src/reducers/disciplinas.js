@@ -8,7 +8,8 @@ const initialState = {}
 const sanitizeDisciplina = (id, { titulo, notas }) => {
   return {
     [id]: {
-      id, titulo,
+      id,
+      titulo,
       notas: parseObjectValuesToFloat(notas)
     }
   }

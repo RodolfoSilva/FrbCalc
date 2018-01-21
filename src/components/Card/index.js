@@ -1,9 +1,9 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { View, TouchableOpacity } from 'react-native'
 import styles from './styles'
 import PropTypes from 'prop-types'
 
-class Card extends React.PureComponent {
+class Card extends PureComponent {
   renderCard() {
     return (
       <View style={styles.container}>

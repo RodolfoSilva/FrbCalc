@@ -1,4 +1,4 @@
-import * as uuid from 'uuid/v4';
+import * as uuid from 'uuid/v4'
 import reducer from '../../reducers/disciplinas'
 import * as types from '../../constants/ActionTypes'
 
@@ -20,7 +20,7 @@ describe('Disciplinas reducer', () => {
         disciplina
       })
 
-      expect(newState).toEqual({ [id] : { id, ...disciplina }})
+      expect(newState).toEqual({ [id]: { id, ...disciplina } })
     })
 
     it('Deve adicionar uma nova disciplina sem remover as que já existem receber a action ADD_DISCIPLINA', () => {

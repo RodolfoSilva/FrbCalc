@@ -1,6 +1,7 @@
-import React from 'react';
-import { View, TouchableOpacity, Text } from 'react-native';
-import styles from './styles';
+import React from 'react'
+import { View, Text } from 'react-native'
+import PropTypes from 'prop-types'
+import styles from './styles'
 
 const Header = ({ title = 'Calculadora DeVry' }) => (
   <View style={styles.container}>
@@ -10,4 +11,8 @@ const Header = ({ title = 'Calculadora DeVry' }) => (
   </View>
 )
 
-export default Header;
+Header.propTypes = {
+  title: PropTypes.string.isRequired
+}
+
+export default Header
