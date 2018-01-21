@@ -4,30 +4,34 @@ import styles from './styles'
 import PropTypes from 'prop-types'
 
 class Card extends PureComponent {
+  static propTypes = {
+    onPress: PropTypes.func,
+    children: PropTypes.node
+  }
+
+  static defaultProps = {
+    children: null
+  }
+
   renderCard() {
-    return (
-      <View style={styles.container}>
-        <View style={styles.wrapper}>{this.props.children}</View>
-      </View>
-    )
+    return <View style={styles.wrapper}>{this.props.children}</View>
   }
 
   render() {
-    if (!this.props.onClick) {
-      return this.renderCard()
+    if (!this.props.onPress) {
+      return (
+        <View style={styles.container}>
+          {this.renderCard()}
+        </View>
+      )
     }
 
     return (
-      <TouchableOpacity onPress={() => this.props.onClick()}>
+      <TouchableOpacity style={styles.container} onPress={() => this.props.onPress()}>
         {this.renderCard()}
       </TouchableOpacity>
     )
   }
-}
-
-Card.propTypes = {
-  onClick: PropTypes.func,
-  children: PropTypes.node.isRequired
 }
 
 export default Card
