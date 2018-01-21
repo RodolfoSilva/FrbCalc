@@ -1,7 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { FlatList, View, Button, TouchableOpacity, Text } from 'react-native'
-import Icon from 'react-native-vector-icons/Ionicons';
+import PropTypes from 'prop-types'
+import { FlatList, View, TouchableOpacity } from 'react-native'
+import Icon from 'react-native-vector-icons/Ionicons'
 
 import Disciplina from '../../components/Disciplina'
 import styles from './styles'
@@ -23,6 +24,13 @@ let HomeScreen = ({ disciplinas, navigation }) => (
 
 HomeScreen.navigationOptions = {
   title: `Calculadora DeVry`
+}
+
+HomeScreen.propTypes = {
+  disciplinas: PropTypes.object,
+  navigation: PropTypes.shape({
+    navigate: PropTypes.func.isRequired
+  })
 }
 
 const mapStateToProps = ({ disciplinas }) => ({ disciplinas })

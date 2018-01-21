@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text, View } from 'react-native'
+import PropTypes from 'prop-types'
 import Card from '../Card'
 import Previsoes from './Previsoes'
 import Notas from './Notas'
@@ -14,5 +15,12 @@ const Disciplina = ({ id, titulo, notas, onClick }) => (
     <Notas style={styles.notas} {...notas} />
   </Card>
 )
+
+Disciplina.propTypes = {
+  id: PropTypes.string.isRequired,
+  titulo: PropTypes.string.isRequired,
+  notas: PropTypes.object.isRequired,
+  onClick: PropTypes.func.isRequired
+}
 
 export default Disciplina

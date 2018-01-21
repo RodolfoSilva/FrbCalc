@@ -51,19 +51,19 @@ describe('NotasCalculator', () => {
 
   describe('Método notaParaAP1', () => {
     it('Deve retornar 5 quando quando as notas da ap2 e ap3 forem 5', () => {
-      expect(NotasCalculator.notaParaAP1({ap1: null, ap2: 5, ap3: 5 })).toEqual(5)
+      expect(NotasCalculator.notaParaAP1({ ap1: null, ap2: 5, ap3: 5 })).toEqual(5)
     })
     it('Deve retornar null quando quando as todas as notas forem passadas', () => {
-      expect(NotasCalculator.notaParaAP1({ap1: 4, ap2: 5, ap3: 5 })).toEqual(null)
+      expect(NotasCalculator.notaParaAP1({ ap1: 4, ap2: 5, ap3: 5 })).toEqual(null)
     })
   })
 
   describe('Método notaParaAP2', () => {
     it('Deve retornar 5 quando quando as notas da ap1 e ap3 forem 5', () => {
-      expect(NotasCalculator.notaParaAP2({ap1: 5, ap2: null, ap3: 5 })).toEqual(5)
+      expect(NotasCalculator.notaParaAP2({ ap1: 5, ap2: null, ap3: 5 })).toEqual(5)
     })
     it('Deve retornar null quando quando as todas as notas forem passadas', () => {
-      expect(NotasCalculator.notaParaAP2({ap1: 4, ap2: 5, ap3: 5 })).toEqual(null)
+      expect(NotasCalculator.notaParaAP2({ ap1: 4, ap2: 5, ap3: 5 })).toEqual(null)
     })
   })
 

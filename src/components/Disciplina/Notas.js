@@ -1,7 +1,7 @@
 import React from 'react'
 import { View } from 'react-native'
 import Nota from './Nota'
-import { colors } from '../../styles'
+import PropTypes from 'prop-types'
 import { styleByNota } from './styles'
 
 const Notas = ({ ap1, ap2, ap3, style }) => (
@@ -11,5 +11,12 @@ const Notas = ({ ap1, ap2, ap3, style }) => (
     <Nota value={ap3} valueStyle={styleByNota(ap3)} title="AP3" />
   </View>
 )
+
+Notas.propTypes = {
+  ap1: PropTypes.number,
+  ap2: PropTypes.number,
+  ap3: PropTypes.number,
+  style: PropTypes.object
+}
 
 export default Notas

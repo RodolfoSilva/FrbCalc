@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { View, Button, TouchableOpacity } from 'react-native'
+import { View, TouchableOpacity } from 'react-native'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Icon from 'react-native-vector-icons/Ionicons'
 import DisciplinaForm from '../../components/DisciplinaForm'
@@ -8,8 +9,8 @@ import styles from './styles'
 
 class DisciplinaScreen extends Component {
   static navigationOptions = ({ navigation }) => {
-    const { params = {} } = navigation.state;
-    const { handleSave = () => null} = params
+    const { params = {} } = navigation.state
+    const { handleSave = () => null } = params
 
     return {
       title: 'Disciplina',
@@ -21,6 +22,19 @@ class DisciplinaScreen extends Component {
         </View>
       )
     }
+  }
+
+  static propTypes = {
+    navigation: PropTypes.shape({
+      setParams: PropTypes.func.isRequired,
+      goBack: PropTypes.func.isRequired
+    }),
+    addDisciplina: PropTypes.func.isRequired
+  }
+
+  constructor (props) {
+    super(props)
+    this.onSubmit = this.onSubmit.bind(this)
   }
 
   componentDidMount() {
@@ -40,7 +54,7 @@ class DisciplinaScreen extends Component {
       <View style={styles.container}>
         <DisciplinaForm
           ref={(ref) => (this.form = ref)}
-          onSubmit={this.onSubmit.bind(this)}
+          onSubmit={this.onSubmit}
           style={{ paddingHorizontal: 16 }}
         />
       </View>
@@ -49,8 +63,6 @@ class DisciplinaScreen extends Component {
 }
 
 const mapStateToProps = () => ({})
-const mapDispatchToProps =  ({ addDisciplina })
+const mapDispatchToProps = ({ addDisciplina })
 
-DisciplinaScreen = connect(mapStateToProps, mapDispatchToProps)(DisciplinaScreen)
-
-export default DisciplinaScreen
+export default connect(mapStateToProps, mapDispatchToProps)(DisciplinaScreen)

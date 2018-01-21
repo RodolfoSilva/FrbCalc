@@ -1,4 +1,4 @@
-import configureStore from './configureStore';
-export const store = configureStore();
+import configureStore from './configureStore'
+export const store = configureStore()
 
-export default store;
+export default store

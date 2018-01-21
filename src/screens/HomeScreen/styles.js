@@ -4,7 +4,7 @@ import { colors } from '../../styles'
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F4F4F4',
+    backgroundColor: '#F4F4F4'
   },
   list: {
     flex: 1,
@@ -20,7 +20,7 @@ export default StyleSheet.create({
     position: 'absolute',
     bottom: 20,
     right: 20,
-    shadowColor: "#000",
+    shadowColor: '#000',
     shadowOpacity: 0.23,
     shadowRadius: 3,
     shadowOffset: {
@@ -28,4 +28,4 @@ export default StyleSheet.create({
       width: 0
     }
   }
-});
+})

@@ -1,5 +1,6 @@
-import React, { Component, Fragment } from 'react'
-import { View, Button, Alert, TouchableOpacity } from 'react-native'
+import React, { Component } from 'react'
+import { View, Alert, TouchableOpacity } from 'react-native'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import Icon from 'react-native-vector-icons/Ionicons'
 import DisciplinaForm from '../../components/DisciplinaForm'
@@ -7,14 +8,24 @@ import { saveDisciplina, removeDisciplina } from '../../actions/DisciplinaAction
 import styles from './styles'
 
 class DisciplinaScreen extends Component {
+  static propTypes = {
+    saveDisciplina: PropTypes.func.isRequired,
+    navigation: PropTypes.shape({
+      setParams: PropTypes.func.isRequired,
+      goBack: PropTypes.func.isRequired,
+      state: PropTypes.object
+    }),
+    removeDisciplina: PropTypes.func.isRequired
+  }
+
   static navigationOptions = ({ navigation }) => {
-    const { params = {} } = navigation.state;
+    const { params = {} } = navigation.state
     const { handleSave = () => null, handleRemove = () => null } = params
 
     return {
       title: 'Disciplina',
       headerRight: (
-        <View style={{ flex: 0, flexDirection: 'row'}}>
+        <View style={{ flex: 0, flexDirection: 'row' }}>
           <TouchableOpacity style={styles.headerButton} onPress={handleRemove}>
             <Icon name="md-trash" size={24} color="white" />
           </TouchableOpacity>
@@ -24,6 +35,11 @@ class DisciplinaScreen extends Component {
         </View>
       )
     }
+  }
+
+  constructor(props) {
+    super(props)
+    this.onSubmit = this.onSubmit.bind(this)
   }
 
   componentDidMount() {
@@ -38,10 +54,11 @@ class DisciplinaScreen extends Component {
     Alert.alert('Atenção', 'Deseja remover essa disciplina?',
       [
         { text: 'Não', onPress: () => {}, style: 'cancel' },
-        { text: 'Sim', onPress: () => {
-          this.props.removeDisciplina(this.props.navigation.state.params.disciplina)
-          this.props.navigation.goBack()
-        }},
+        { text: 'Sim',
+          onPress: () => {
+            this.props.removeDisciplina(this.props.navigation.state.params.disciplina)
+            this.props.navigation.goBack()
+          }}
       ])
   }
 
@@ -57,7 +74,7 @@ class DisciplinaScreen extends Component {
         <DisciplinaForm
           ref={(ref) => (this.form = ref)}
           initialState={this.props.navigation.state.params.disciplina}
-          onSubmit={this.onSubmit.bind(this)}
+          onSubmit={this.onSubmit}
           style={{ paddingHorizontal: 16 }}
         />
       </View>
@@ -68,6 +85,4 @@ class DisciplinaScreen extends Component {
 const mapStateToProps = () => ({})
 const mapDispatchToProps = ({ saveDisciplina, removeDisciplina })
 
-DisciplinaScreen = connect(mapStateToProps, mapDispatchToProps)(DisciplinaScreen)
-
-export default DisciplinaScreen
+export default connect(mapStateToProps, mapDispatchToProps)(DisciplinaScreen)

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Text, View } from 'react-native'
+import PropTypes from 'prop-types'
 import Previsao from './Previsao'
 import { NotasCalculator } from '../../utils'
 
@@ -22,5 +23,8 @@ const Previsoes = ({ notas }) => {
   )
 }
 
+Previsoes.propTypes = {
+  notas: PropTypes.object.isRequired
+}
 
 export default Previsoes
