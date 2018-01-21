@@ -11,11 +11,11 @@ const Nota = ({ value = null, title, style, valueStyle, titleStyle }) => (
 )
 
 Nota.propTypes = {
-  value: PropTypes.string.isRequired,
+  value: PropTypes.number,
   title: PropTypes.string.isRequired,
-  style: PropTypes.object,
-  valueStyle: PropTypes.func,
-  titleStyle: PropTypes.func
+  style: View.propTypes.style,
+  valueStyle: Text.propTypes.style,
+  titleStyle: Text.propTypes.style
 }
 
 export default Nota

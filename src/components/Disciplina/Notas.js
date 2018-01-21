@@ -16,7 +16,7 @@ Notas.propTypes = {
   ap1: PropTypes.number,
   ap2: PropTypes.number,
   ap3: PropTypes.number,
-  style: PropTypes.object
+  style: View.propTypes.style
 }
 
 export default Notas

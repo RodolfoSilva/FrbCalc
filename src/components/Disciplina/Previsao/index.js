@@ -16,4 +16,5 @@ Previsao.propTypes = {
   value: PropTypes.number,
   title: PropTypes.string.isRequired
 }
+
 export default Previsao
