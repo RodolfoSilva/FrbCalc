@@ -1,28 +1,12 @@
-#
-# Configuration
-#
-sudo: required
 dist: trusty
-
 notifications:
   email: true
-
 cache:
   directories:
     - node_modules
-#
-# Build Lifecycle:
-#
-
 before_install:
   - nvm install --lts
   - node --version
-
 install: npm install
-
 script:
   - npm test
-
-after_success:
-  # Send coverage info off to cloud ppl
-  - ./node_modules/.bin/codecov
