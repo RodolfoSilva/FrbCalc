@@ -1,4 +1,4 @@
-import { parseObjectValuesToFloat } from '../../utils'
+import { parseObjectValuesToFloat } from '../'
 
 describe('parseObjectValuesToFloat', () => {
   test('ao receber um objeto vazio deve retornar um objeto vazio', () => {

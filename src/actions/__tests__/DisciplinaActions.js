@@ -1,4 +1,4 @@
-import * as actions from '../../actions/DisciplinaActions'
+import * as actions from '../DisciplinaActions'
 import * as types from '../../constants/ActionTypes'
 
 describe('DisciplinaActions', () => {

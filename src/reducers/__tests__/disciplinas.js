@@ -1,5 +1,5 @@
 import * as uuid from 'uuid/v4'
-import reducer from '../../reducers/disciplinas'
+import reducer from '../disciplinas'
 import * as types from '../../constants/ActionTypes'
 
 jest.mock('uuid/v4', () => jest.fn())

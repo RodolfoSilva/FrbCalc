@@ -1,13 +1,19 @@
 import React, { Component } from 'react'
-import { View, Alert, TouchableOpacity } from 'react-native'
+import { View, Alert } from 'react-native'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Icon from 'react-native-vector-icons/Ionicons'
+import HeaderButtons from '../../components/HeaderButtons'
 import DisciplinaForm from '../../components/DisciplinaForm'
+import HeaderIconButton from '../../components/HeaderIconButton'
 import { saveDisciplina, removeDisciplina } from '../../actions/DisciplinaActions'
 import styles from './styles'
 
 class DisciplinaScreen extends Component {
+  constructor(props) {
+    super(props)
+    this.onSubmit = this.onSubmit.bind(this)
+  }
+
   static propTypes = {
     saveDisciplina: PropTypes.func.isRequired,
     navigation: PropTypes.shape({
@@ -25,25 +31,15 @@ class DisciplinaScreen extends Component {
     return {
       title: 'Disciplina',
       headerRight: (
-        <View style={{ flex: 0, flexDirection: 'row' }}>
-          <TouchableOpacity style={styles.headerButton} onPress={handleRemove}>
-            <Icon name="md-trash" size={24} color="white" />
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.headerButton} onPress={handleSave}>
-            <Icon name="md-checkmark" size={24} color="white" />
-          </TouchableOpacity>
-        </View>
+        <HeaderButtons>
+          <HeaderIconButton onPress={handleRemove} name="md-trash" />
+          <HeaderIconButton onPress={handleSave} name="md-checkmark" />
+        </HeaderButtons>
       )
     }
   }
 
-  constructor(props) {
-    super(props)
-    this.onSubmit = this.onSubmit.bind(this)
-  }
-
   componentDidMount() {
-    // We can only set the function after the component has been initialized
     this.props.navigation.setParams({
       handleSave: this.form.doSubmit.bind(this),
       handleRemove: this.onRemove.bind(this)

@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card deve disparar a função de pressionado 1`] = `
+<TouchableOpacity
+  activeOpacity={0.6}
+  onPress={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#FFF",
+      "borderColor": "#EEE",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "flex": 1,
+      "marginBottom": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "padding": 15,
+      }
+    }
+  >
+    Oi
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Card renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#FFF",
+      "borderColor": "#EEE",
+      "borderRadius": 3,
+      "borderWidth": 1,
+      "flex": 1,
+      "marginBottom": 15,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "padding": 15,
+      }
+    }
+  >
+    Oi
+  </View>
+</View>
+`;
