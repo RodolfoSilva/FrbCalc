@@ -27,7 +27,7 @@ class Card extends PureComponent {
     }
 
     return (
-      <TouchableOpacity style={styles.container} onPress={() => this.props.onPress()}>
+      <TouchableOpacity activeOpacity={0.6} style={styles.container} onPress={() => this.props.onPress()}>
         {this.renderCard()}
       </TouchableOpacity>
     )

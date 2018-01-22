@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { View, TouchableOpacity } from 'react-native'
+import { View } from 'react-native'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Icon from 'react-native-vector-icons/Ionicons'
 import DisciplinaForm from '../../components/DisciplinaForm'
+import HeaderButtons from '../../components/HeaderButtons'
+import HeaderIconButton from '../../components/HeaderIconButton'
 import { addDisciplina } from '../../actions/DisciplinaActions'
 import styles from './styles'
 
@@ -15,11 +16,9 @@ class DisciplinaScreen extends Component {
     return {
       title: 'Disciplina',
       headerRight: (
-        <View style={{ flex: 0, flexDirection: 'row' }}>
-          <TouchableOpacity style={styles.headerButton} onPress={handleSave}>
-            <Icon name="md-checkmark" size={24} color="white" />
-          </TouchableOpacity>
-        </View>
+        <HeaderButtons>
+          <HeaderIconButton onPress={handleSave} name="md-checkmark" />
+        </HeaderButtons>
       )
     }
   }
@@ -38,7 +37,6 @@ class DisciplinaScreen extends Component {
   }
 
   componentDidMount() {
-    // We can only set the function after the component has been initialized
     this.props.navigation.setParams({
       handleSave: this.form.doSubmit.bind(this)
     })
