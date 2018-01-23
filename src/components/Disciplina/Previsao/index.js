@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import PropTypes from 'prop-types'
 import Nota from '../Nota'
 import styles from './styles'
 
@@ -11,5 +11,10 @@ const Previsao = ({ value, title }) => (
     valueStyle={styles.value}
   />
 )
+
+Previsao.propTypes = {
+  value: PropTypes.number,
+  title: PropTypes.string.isRequired
+}
 
 export default Previsao

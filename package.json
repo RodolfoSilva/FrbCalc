@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "test:dev": "jest --watchAll"
+    "lint": "eslint src/**",
+    "test:dev": "jest --watchAll",
+    "storybook": "storybook start -p 7007"
   },
   "dependencies": {
     "color": "^2.0.1",
@@ -23,16 +25,43 @@
     "uuid": "^3.1.0"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.1",
     "babel-jest": "22.0.3",
     "babel-preset-react-native": "^4.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.0",
+    "eslint": "^4.16.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.7.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-react-native": "^3.2.1",
+    "eslint-plugin-standard": "^3.0.1",
     "jest": "22.0.3",
+    "react-dom": "^16.2.0",
     "react-test-renderer": "16.0.0",
-    "redux-devtools-extension": "^2.13.2"
+    "redux-devtools-extension": "^2.13.2",
+    "@storybook/react-native": "^3.3.10",
+    "@storybook/addon-actions": "^3.3.10",
+    "@storybook/addon-links": "^3.3.10",
+    "@storybook/addons": "^3.3.10",
+    "babel-core": "^6.26.0",
+    "prop-types": "^15.6.0"
   },
   "jest": {
     "preset": "react-native",
     "transformIgnorePatterns": [
       "node_modules/(?!react-native|react-navigation)/"
+    ],
+    "setupFiles": [
+      "<rootDir>/src/setupTests.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
     ]
   }
 }

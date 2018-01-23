@@ -1,4 +1,3 @@
-import React from 'react'
 import { StackNavigator } from 'react-navigation'
 import { colors } from '../styles'
 import HomeScreen from './HomeScreen'
@@ -8,7 +7,10 @@ import DisciplinaAddScreen from './DisciplinaAddScreen'
 const Router = StackNavigator(
   {
     Home: {
-      screen: HomeScreen
+      screen: HomeScreen,
+      navigationOptions: {
+        title: `Calculadora DeVry`
+      }
     },
     Disciplina: {
       screen: DisciplinaScreen

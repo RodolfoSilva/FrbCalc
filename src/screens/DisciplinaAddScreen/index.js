@@ -1,30 +1,42 @@
 import React, { Component } from 'react'
-import { View, Button, TouchableOpacity } from 'react-native'
+import { View } from 'react-native'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import Icon from 'react-native-vector-icons/Ionicons'
 import DisciplinaForm from '../../components/DisciplinaForm'
-import { addDisciplina } from '../../actions/disciplinas'
+import HeaderButtons from '../../components/HeaderButtons'
+import HeaderIconButton from '../../components/HeaderIconButton'
+import { addDisciplina } from '../../actions/DisciplinaActions'
 import styles from './styles'
 
 class DisciplinaScreen extends Component {
   static navigationOptions = ({ navigation }) => {
-    const { params = {} } = navigation.state;
-    const { handleSave = () => null} = params
+    const { params = {} } = navigation.state
+    const { handleSave = () => null } = params
 
     return {
       title: 'Disciplina',
       headerRight: (
-        <View style={{ flex: 0, flexDirection: 'row' }}>
-          <TouchableOpacity style={styles.headerButton} onPress={handleSave}>
-            <Icon name="md-checkmark" size={24} color="white" />
-          </TouchableOpacity>
-        </View>
+        <HeaderButtons>
+          <HeaderIconButton onPress={handleSave} name="md-checkmark" />
+        </HeaderButtons>
       )
     }
   }
 
+  static propTypes = {
+    navigation: PropTypes.shape({
+      setParams: PropTypes.func.isRequired,
+      goBack: PropTypes.func.isRequired
+    }),
+    addDisciplina: PropTypes.func.isRequired
+  }
+
+  constructor (props) {
+    super(props)
+    this.onSubmit = this.onSubmit.bind(this)
+  }
+
   componentDidMount() {
-    // We can only set the function after the component has been initialized
     this.props.navigation.setParams({
       handleSave: this.form.doSubmit.bind(this)
     })
@@ -40,7 +52,7 @@ class DisciplinaScreen extends Component {
       <View style={styles.container}>
         <DisciplinaForm
           ref={(ref) => (this.form = ref)}
-          onSubmit={this.onSubmit.bind(this)}
+          onSubmit={this.onSubmit}
           style={{ paddingHorizontal: 16 }}
         />
       </View>
@@ -49,8 +61,6 @@ class DisciplinaScreen extends Component {
 }
 
 const mapStateToProps = () => ({})
-const mapDispatchToProps =  ({ addDisciplina })
+const mapDispatchToProps = ({ addDisciplina })
 
-DisciplinaScreen = connect(mapStateToProps, mapDispatchToProps)(DisciplinaScreen)
-
-export default DisciplinaScreen
+export default connect(mapStateToProps, mapDispatchToProps)(DisciplinaScreen)

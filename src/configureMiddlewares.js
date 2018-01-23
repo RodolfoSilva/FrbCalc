@@ -1,11 +1,7 @@
-import thunk from 'redux-thunk';
-
 const configureMiddlewares = () => {
-  const middlewares = [];
+  const middlewares = []
 
-  middlewares.push(thunk);
-
-  return middlewares;
+  return middlewares
 }
 
-export default configureMiddlewares;
+export default configureMiddlewares
