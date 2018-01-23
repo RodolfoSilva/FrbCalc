@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "standard",
+    "standard-react"
+  ],
+  "parser": "babel-eslint",
+  "rules": {
+    "space-before-function-paren": 0,
+    "jsx-quotes": 0
+  },
+  "plugins": [
+    "react",
+    "react-native",
+    "jest"
+  ],
+  "env": {
+    "browser": true,
+    "jest/globals": true
+  }
+}

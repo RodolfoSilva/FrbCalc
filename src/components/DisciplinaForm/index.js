@@ -1,25 +1,30 @@
 import React, { Component } from 'react'
 import { View } from 'react-native'
+import PropTypes from 'prop-types'
 import { TextField } from 'react-native-material-textfield'
 import isEmpty from 'lodash/isEmpty'
 import isNumber from 'lodash/isNumber'
 
 class DisciplinaForm extends Component {
+  static propTypes = {
+    initialState: PropTypes.object,
+    onSubmit: PropTypes.func.isRequired,
+    style: View.propTypes.style
+  }
 
   constructor(props) {
     super(props)
 
-    this.onBlur = this.onBlur.bind(this);
-    this.onFocus = this.onFocus.bind(this);
-    this.doSubmit = this.doSubmit.bind(this);
-    this.onChangeText = this.onChangeText.bind(this);
+    this.onBlur = this.onBlur.bind(this)
+    this.onFocus = this.onFocus.bind(this)
+    this.doSubmit = this.doSubmit.bind(this)
 
-    this.tituloRef = this.updateRef.bind(this, 'titulo');
-    this.ap1Ref = this.updateRef.bind(this, 'ap1');
-    this.ap2Ref = this.updateRef.bind(this, 'ap2');
-    this.ap3Ref = this.updateRef.bind(this, 'ap3');
+    this.tituloRef = this.updateRef.bind(this, 'titulo')
+    this.ap1Ref = this.updateRef.bind(this, 'ap1')
+    this.ap2Ref = this.updateRef.bind(this, 'ap2')
+    this.ap3Ref = this.updateRef.bind(this, 'ap3')
     this.state = {
-      titulo: '' ,
+      titulo: '',
       notas: {
         ap1: '',
         ap2: '',
@@ -27,7 +32,6 @@ class DisciplinaForm extends Component {
       },
       ...this.props.initialState
     }
-
 
     if (!isEmpty(this.state.notas)) {
       Object.keys(this.state.notas)
@@ -44,30 +48,24 @@ class DisciplinaForm extends Component {
   }
 
   updateRef(name, ref) {
-    this[name] = ref;
+    this[name] = ref
   }
 
   onFocus() {
-    const { errors = {} } = this.state;
+    const { errors = {} } = this.state
     for (let name in errors) {
-      let ref = this[name];
+      let ref = this[name]
 
       if (ref && ref.isFocused()) {
-        delete errors[name];
+        delete errors[name]
       }
     }
 
-    this.setState({ errors });
-  }
-
-  onChangeText(text) {
-    ['titulo', 'ap1', 'ap2', 'ap3']
-      .filter((name) => this[name].isFocused())
-      .forEach((name) => this.setState({ [name]: text }));
+    this.setState({ errors })
   }
 
   fieldIsRequired(fieldName, error) {
-    let value = this[fieldName].value();
+    let value = this[fieldName].value()
 
     if (value !== '') return
 
@@ -75,7 +73,7 @@ class DisciplinaForm extends Component {
   }
 
   onBlur(fieldName) {
-    const { errors = {} } = this.state;
+    const { errors = {} } = this.state
     if (fieldName === 'titulo') errors.titulo = this._validateTitulo()
 
     if (['ap1', 'ap2', 'ap3'].includes(fieldName)) errors[fieldName] = this._validateNota(fieldName)
@@ -88,7 +86,7 @@ class DisciplinaForm extends Component {
   }
 
   _validateNota(fieldName) {
-    let value = this[fieldName].value();
+    let value = this[fieldName].value()
 
     if (value === '') return
 
@@ -123,7 +121,7 @@ class DisciplinaForm extends Component {
   }
 
   render() {
-    const { errors = {}, titulo, notas = {} } = this.state;
+    const { errors = {}, titulo, notas = {} } = this.state
 
     return (
       <View style={this.props.style}>
@@ -135,7 +133,6 @@ class DisciplinaForm extends Component {
           error={errors.titulo}
           onBlur={() => this.onBlur('titulo')}
           onFocus={this.onFocus}
-          onChangeText={this.onChangeText}
           onSubmitEditing={this.onSubmitFirstName}
           onChangeText={(titulo) => this.setState({ titulo })}
         />
@@ -147,7 +144,6 @@ class DisciplinaForm extends Component {
           value={notas.ap1}
           onBlur={() => this.onBlur('ap1')}
           onFocus={this.onFocus}
-          onChangeText={this.onChangeText}
           error={errors.ap1}
           onChangeText={(ap1) => this.setState((prevState) => ({ notas: { ...prevState.notas, ap1 } }))}
         />
@@ -159,7 +155,6 @@ class DisciplinaForm extends Component {
           keyboardType="numeric"
           onBlur={() => this.onBlur('ap2')}
           onFocus={this.onFocus}
-          onChangeText={this.onChangeText}
           error={errors.ap2}
           onChangeText={(ap2) => this.setState((prevState) => ({ notas: { ...prevState.notas, ap2 } }))}
         />
@@ -171,7 +166,6 @@ class DisciplinaForm extends Component {
           keyboardType="numeric"
           onBlur={() => this.onBlur('ap3')}
           onFocus={this.onFocus}
-          onChangeText={this.onChangeText}
           error={errors.ap3}
           onChangeText={(ap3) => this.setState((prevState) => ({ notas: { ...prevState.notas, ap3 } }))}
         />

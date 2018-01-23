@@ -1,32 +1,46 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
-import { FlatList, View, Button, TouchableOpacity, Text } from 'react-native'
-import Icon from 'react-native-vector-icons/Ionicons';
-
+import PropTypes from 'prop-types'
+import { FlatList, View } from 'react-native'
 import Disciplina from '../../components/Disciplina'
+import FabButton from '../../components/FabButton'
 import styles from './styles'
 
-let HomeScreen = ({ disciplinas, navigation }) => (
-  <View style={styles.container}>
-    <FlatList
-      data={Object.values(disciplinas)}
-      keyExtractor={(item) => item.id}
-      style={styles.list}
-      renderItem={({ item }) => <Disciplina onClick={(id) => navigation.navigate('Disciplina', { disciplina: item })} {...item} />}
-    />
+class HomeScreen extends PureComponent {
+  static propTypes = {
+    disciplinas: PropTypes.object,
+    navigation: PropTypes.shape({
+      navigate: PropTypes.func.isRequired
+    })
+  }
 
-    <TouchableOpacity style={styles.addButton} onPress={() => navigation.navigate('DisciplinaAdd')}>
-      <Icon name="md-add" size={24} color="white" />
-    </TouchableOpacity>
-  </View>
-)
+  goToDisciplina(disciplina) {
+    this.props.navigation.navigate('Disciplina', { disciplina })
+  }
 
-HomeScreen.navigationOptions = {
-  title: `Calculadora DeVry`
+  renderItem({ item }) {
+    return (
+      <Disciplina onPress={(id) => this.goToDisciplina(item)} {...item} />
+    )
+  }
+
+  render() {
+    const { disciplinas, navigation } = this.props
+    return (
+      <View style={styles.container}>
+        <FlatList
+          data={Object.values(disciplinas)}
+          keyExtractor={(item) => item.id}
+          style={styles.list}
+          renderItem={(item) => this.renderItem(item)}
+        />
+
+        <FabButton name="md-add" onPress={() => navigation.navigate('DisciplinaAdd')} />
+      </View>
+    )
+  }
 }
 
 const mapStateToProps = ({ disciplinas }) => ({ disciplinas })
 
-HomeScreen = connect(mapStateToProps)(HomeScreen)
-
-export default HomeScreen
+export default connect(mapStateToProps)(HomeScreen)

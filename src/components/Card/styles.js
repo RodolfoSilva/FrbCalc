@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
   container: {
@@ -10,8 +10,8 @@ const styles = StyleSheet.create({
     borderRadius: 3
   },
   wrapper: {
-    padding: 15,
+    padding: 15
   }
-});
+})
 
-export default styles;
+export default styles
