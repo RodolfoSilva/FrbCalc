@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
+import SplashScreen from 'react-native-splash-screen'
 import { FlatList, View } from 'react-native'
 import Disciplina from '../../components/Disciplina'
 import FabButton from '../../components/FabButton'
@@ -12,6 +13,10 @@ class HomeScreen extends PureComponent {
     navigation: PropTypes.shape({
       navigate: PropTypes.func.isRequired
     })
+  }
+
+  componentDidMount() {
+    SplashScreen.hide()
   }
 
   goToDisciplina(disciplina) {
