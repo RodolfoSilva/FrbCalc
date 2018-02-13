@@ -5,7 +5,7 @@ import { SAVE_DISCIPLINA, ADD_DISCIPLINA, REMOVE_DISCIPLINA } from '../constants
 
 const initialState = {}
 
-const sanitizeDisciplina = (id, { titulo, notas }) => {
+export const sanitizeDisciplina = (id, { titulo, notas }) => {
   return {
     [id]: {
       id,
