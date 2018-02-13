@@ -1,9 +1,9 @@
 import React from 'react'
 import { View } from 'react-native'
 import PropTypes from 'prop-types'
-import Previsao from './Previsao'
-import ReprovadoMessage from './ReprovadoMessage'
-import { NotasCalculator } from '../../utils'
+import Previsao from '../Previsao'
+import ReprovadoMessage from '../ReprovadoMessage'
+import { NotasCalculator } from '../../../utils'
 
 const Previsoes = ({ style, notas }) => {
   const mediaFinal = NotasCalculator.mediaFinal(notas)
@@ -23,7 +23,11 @@ const Previsoes = ({ style, notas }) => {
 }
 
 Previsoes.propTypes = {
-  notas: PropTypes.object.isRequired,
+  notas: PropTypes.shape({
+    ap1: PropTypes.number,
+    ap2: PropTypes.number,
+    ap3: PropTypes.number
+  }).isRequired,
   style: View.propTypes.style
 }
 

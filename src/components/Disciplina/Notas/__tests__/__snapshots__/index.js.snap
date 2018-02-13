@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notas Renderiza apenas a AP1 1`] = `
+<View>
+  <Nota
+    title="AP1"
+    value={5}
+    valueStyle={
+      Object {
+        "color": "#32DB64",
+      }
+    }
+  />
+  <Nota
+    title="AP2"
+    value={null}
+    valueStyle={Object {}}
+  />
+  <Nota
+    title="AP3"
+    value={null}
+    valueStyle={Object {}}
+  />
+</View>
+`;
+
+exports[`Notas Renderiza apenas a AP2 1`] = `
+<View>
+  <Nota
+    title="AP1"
+    value={null}
+    valueStyle={Object {}}
+  />
+  <Nota
+    title="AP2"
+    value={3}
+    valueStyle={
+      Object {
+        "color": "#F53D3D",
+      }
+    }
+  />
+  <Nota
+    title="AP3"
+    value={null}
+    valueStyle={Object {}}
+  />
+</View>
+`;
+
+exports[`Notas Renderiza apenas a AP3 1`] = `
+<View>
+  <Nota
+    title="AP1"
+    value={null}
+    valueStyle={Object {}}
+  />
+  <Nota
+    title="AP2"
+    value={null}
+    valueStyle={Object {}}
+  />
+  <Nota
+    title="AP3"
+    value={9}
+    valueStyle={
+      Object {
+        "color": "#32DB64",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Notas Renderiza todas as notas 1`] = `
+<View>
+  <Nota
+    title="AP1"
+    value={4}
+    valueStyle={
+      Object {
+        "color": "#F53D3D",
+      }
+    }
+  />
+  <Nota
+    title="AP2"
+    value={7}
+    valueStyle={
+      Object {
+        "color": "#32DB64",
+      }
+    }
+  />
+  <Nota
+    title="AP3"
+    value={5}
+    valueStyle={
+      Object {
+        "color": "#32DB64",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`Notas Renderiza todas as notas apenas com os placelholders 1`] = `
+<View>
+  <Nota
+    title="AP1"
+    value={null}
+    valueStyle={Object {}}
+  />
+  <Nota
+    title="AP2"
+    value={null}
+    valueStyle={Object {}}
+  />
+  <Nota
+    title="AP3"
+    value={null}
+    valueStyle={Object {}}
+  />
+</View>
+`;

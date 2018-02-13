@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Previsoes Renderiza a mensagem de reprovação 1`] = `
+<View>
+  <ReprovadoMessage />
+</View>
+`;
+
+exports[`Previsoes Renderiza a média final 1`] = `
+<View>
+  <Previsao
+    title="Média final"
+    value={0}
+  />
+</View>
+`;
+
+exports[`Previsoes Renderiza a previsão para AP1 1`] = `
+<View>
+  <Previsao
+    title="Necessário tirar na AP1"
+    value={5}
+  />
+</View>
+`;
+
+exports[`Previsoes Renderiza a previsão para AP2 1`] = `
+<View>
+  <Previsao
+    title="Necessário tirar na AP2"
+    value={5}
+  />
+</View>
+`;
+
+exports[`Previsoes Renderiza a previsão para AP3 1`] = `
+<View>
+  <Previsao
+    title="Necessário tirar na AP3"
+    value={5}
+  />
+</View>
+`;
+
+exports[`Previsoes Renderiza somente a view se todas as notas estivereme em branco 1`] = `<View />`;
