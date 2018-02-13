@@ -5,7 +5,7 @@ import styles from './styles'
 
 const Nota = ({ value = null, title, style, valueStyle, titleStyle }) => (
   <View style={[styles.container, style]}>
-    <Text style={[styles.value, valueStyle]}>{value === null ? '_._' : value}</Text>
+    <Text style={[styles.value, valueStyle]}>{value === null ? '_._' : value.toString()}</Text>
     <Text style={[styles.title, titleStyle]}>{title}</Text>
   </View>
 )
