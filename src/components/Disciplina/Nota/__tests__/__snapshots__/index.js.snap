@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card Renderiza a nota do usuário 1`] = `
+exports[`Nota Renderiza a nota do usuário 1`] = `
 <View
   style={
     Array [
@@ -49,7 +49,7 @@ exports[`Card Renderiza a nota do usuário 1`] = `
 </View>
 `;
 
-exports[`Card Renderiza o titulo e no lugar da nota coloca _._ 1`] = `
+exports[`Nota Renderiza o titulo e no lugar da nota coloca _._ 1`] = `
 <View
   style={
     Array [
@@ -98,7 +98,7 @@ exports[`Card Renderiza o titulo e no lugar da nota coloca _._ 1`] = `
 </View>
 `;
 
-exports[`Card Renderiza o titulo e se a nota for null no lugar dela coloca _._ 1`] = `
+exports[`Nota Renderiza o titulo e se a nota for null no lugar dela coloca _._ 1`] = `
 <View
   style={
     Array [
