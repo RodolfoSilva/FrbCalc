@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Disciplina Deve renderizar a disiciplina 1`] = `
+<Card
+  onPress={[Function]}
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#000",
+          "fontSize": 16,
+          "fontWeight": "500",
+        }
+      }
+    >
+      Cálculo
+    </Text>
+  </View>
+  <Previsoes
+    notas={Object {}}
+  />
+  <Notas
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  />
+</Card>
+`;
+
+exports[`Disciplina Renderiza as notas 1`] = `
+<Card
+  onPress={[Function]}
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#000",
+          "fontSize": 16,
+          "fontWeight": "500",
+        }
+      }
+    >
+      Cálculo
+    </Text>
+  </View>
+  <Previsoes
+    notas={
+      Object {
+        "ap1": 10,
+        "ap2": 5,
+        "ap3": 3,
+      }
+    }
+  />
+  <Notas
+    ap1={10}
+    ap2={5}
+    ap3={3}
+    style={
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      }
+    }
+  />
+</Card>
+`;
