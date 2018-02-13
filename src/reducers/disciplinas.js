@@ -10,7 +10,7 @@ const sanitizeDisciplina = (id, { titulo, notas }) => {
     [id]: {
       id,
       titulo,
-      notas: parseObjectValuesToFloat(notas)
+      notas: parseObjectValuesToFloat({ ap1: null, ap2: null, ap3: null, ...notas })
     }
   }
 }

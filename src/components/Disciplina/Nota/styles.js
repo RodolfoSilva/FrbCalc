@@ -7,13 +7,13 @@ export default StyleSheet.create({
     alignItems: 'center'
   },
   value: {
-    fontSize: 36,
-    fontWeight: '300',
+    fontSize: 38,
+    fontWeight: '200',
     color: colors.mutted
   },
   title: {
     fontSize: 14,
-    fontWeight: '500',
+    fontWeight: '300',
     color: colors.mutted
   }
 })

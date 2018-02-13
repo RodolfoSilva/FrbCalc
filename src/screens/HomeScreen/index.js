@@ -31,11 +31,13 @@ class HomeScreen extends PureComponent {
 
   render() {
     const { disciplinas, navigation } = this.props
+    console.log(disciplinas)
     return (
       <View style={styles.container}>
         <FlatList
           data={Object.values(disciplinas)}
           keyExtractor={(item) => item.id}
+          contentContainerStyle={{ flexGrow: 1, paddingBottom: 15 }}
           style={styles.list}
           renderItem={(item) => this.renderItem(item)}
         />
