@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReprovadoMessage Renderiza a mensagem de reprovação 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "paddingVertical": 26,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#333",
+        "fontSize": 14,
+        "fontWeight": "500",
+      }
+    }
+  >
+    Não foi desssa vez, sorte na próxima....
+  </Text>
+</View>
+`;

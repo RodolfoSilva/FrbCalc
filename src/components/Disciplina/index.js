@@ -19,7 +19,11 @@ const Disciplina = ({ id, titulo, notas, onPress }) => (
 Disciplina.propTypes = {
   id: PropTypes.string.isRequired,
   titulo: PropTypes.string.isRequired,
-  notas: PropTypes.object.isRequired,
+  notas: PropTypes.shape({
+    ap1: PropTypes.number,
+    ap2: PropTypes.number,
+    ap3: PropTypes.number
+  }).isRequired,
   onPress: PropTypes.func.isRequired
 }
 

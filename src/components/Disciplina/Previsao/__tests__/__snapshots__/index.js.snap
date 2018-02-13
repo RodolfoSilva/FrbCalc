@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Previsao Renderiza a previsão da nota com o placeholder 1`] = `
+<Nota
+  style={
+    Object {
+      "paddingBottom": 10,
+    }
+  }
+  title="Média"
+  value={null}
+  valueStyle={
+    Object {
+      "fontSize": 50,
+      "paddingVertical": 6,
+    }
+  }
+/>
+`;
+
+exports[`Previsao Renderiza a previsão da nota contendo 10 1`] = `
+<Nota
+  style={
+    Object {
+      "paddingBottom": 10,
+    }
+  }
+  title="Média"
+  value={10}
+  valueStyle={
+    Object {
+      "fontSize": 50,
+      "paddingVertical": 6,
+    }
+  }
+/>
+`;

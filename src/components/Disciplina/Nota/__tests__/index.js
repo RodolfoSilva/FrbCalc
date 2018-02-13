@@ -3,7 +3,7 @@ import { Text } from 'react-native'
 import Nota from '../'
 import { shallow } from 'enzyme'
 
-describe('Card', () => {
+describe('Nota', () => {
   it('Renderiza o titulo e no lugar da nota coloca _._', () => {
     const wrapper = shallow(<Nota title="AP1" />)
     expect(wrapper.find(Text).first().prop('children')).toEqual('_._')
