@@ -1,15 +1,12 @@
 import FilesystemStorage from 'redux-persist-filesystem-storage'
 import { persistCombineReducers, createTransform } from 'redux-persist'
-
-import disciplinas, { sanitizeDisciplina } from './disciplinas'
+import { sanitizeDisciplinas } from '../utils'
+import disciplinas from './disciplinas'
 
 const transform = createTransform(null, (state, key, fullState) => {
   switch (key) {
     case 'disciplinas':
-      const nextState = Object.values(state)
-        .map((disciplina) => sanitizeDisciplina(disciplina.id, disciplina))
-        .reduce((prevState, disciplina) => ({ ...prevState, ...disciplina }), {})
-      return nextState
+      return sanitizeDisciplinas(state)
     default:
       return state
   }
