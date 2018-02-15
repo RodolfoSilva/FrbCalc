@@ -10,6 +10,10 @@ Calculadora de notas para alunos da DeVry.
 
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/pt-br_badge_web_generic.png" alt="Disponível no Google Play" height="100">](https://play.google.com/store/apps/details?id=com.rodolfosilva.devrycalc) 
 
+## Screenshots
+
+<img src="https://raw.github.com/RodolfoSilva/DevryCalc/master/screenshots/screenshot-001.jpeg" width="280"> <img src="https://raw.github.com/RodolfoSilva/DevryCalc/master/screenshots/screenshot-002.jpeg" width="280"> <img src="https://raw.github.com/RodolfoSilva/DevryCalc/master/screenshots/screenshot-003.jpeg" width="280">
+
 # Configurando o Ambiente
 
 * Clone este repositório
