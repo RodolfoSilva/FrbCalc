@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View } from 'react-native'
+import { ScrollView } from 'react-native'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import DisciplinaForm from '../../components/DisciplinaForm'
@@ -49,13 +49,13 @@ class DisciplinaScreen extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <DisciplinaForm
           ref={(ref) => (this.form = ref)}
           onSubmit={this.onSubmit}
           style={{ paddingHorizontal: 16 }}
         />
-      </View>
+      </ScrollView>
     )
   }
 }
