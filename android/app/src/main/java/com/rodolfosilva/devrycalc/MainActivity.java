@@ -1,4 +1,4 @@
-package com.devrycalc;
+package com.rodolfosilva.devrycalc;
 import android.os.Bundle;
 import com.facebook.react.ReactActivity;
 import org.devio.rn.splashscreen.SplashScreen;
