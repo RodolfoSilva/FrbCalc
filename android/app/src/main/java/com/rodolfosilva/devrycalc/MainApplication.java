@@ -1,4 +1,4 @@
-package com.devrycalc;
+package com.rodolfosilva.devrycalc;
 
 import android.app.Application;
 
