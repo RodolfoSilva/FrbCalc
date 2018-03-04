@@ -95,7 +95,7 @@ def enableProguardInReleaseBuilds = false
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.1"
+    buildToolsVersion "23.0.2"
 
     defaultConfig {
         applicationId "com.rodolfosilva.devrycalc"
@@ -103,6 +103,7 @@ android {
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
+        manifestPlaceholders = [onesignal_app_id: "ae7d6e57-acde-435b-8bf8-41207e704d89", onesignal_google_project_number: "REMOTE"]
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
@@ -137,6 +138,7 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-onesignal')
     compile project(':react-native-splash-screen')
     compile project(':react-native-fetch-blob')
     compile project(':react-native-vector-icons')
