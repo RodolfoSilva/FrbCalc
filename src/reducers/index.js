@@ -1,11 +1,24 @@
 import FilesystemStorage from 'redux-persist-filesystem-storage'
-import { persistCombineReducers } from 'redux-persist'
-
+import { persistCombineReducers, createTransform } from 'redux-persist'
+import { sanitizeDisciplinas } from '../utils'
 import disciplinas from './disciplinas'
 
-const config = { key: 'root', storage: FilesystemStorage }
+const transform = createTransform(null, (state, key, fullState) => {
+  switch (key) {
+    case 'disciplinas':
+      return sanitizeDisciplinas(state)
+    default:
+      return state
+  }
+})
 
-const reducers = persistCombineReducers(config, {
+const persistConfig = {
+  key: 'root',
+  storage: FilesystemStorage,
+  transforms: [transform]
+}
+
+const reducers = persistCombineReducers(persistConfig, {
   disciplinas
 })
 

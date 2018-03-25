@@ -31,7 +31,6 @@ class HomeScreen extends PureComponent {
 
   render() {
     const { disciplinas, navigation } = this.props
-    console.log(disciplinas)
     return (
       <View style={styles.container}>
         <FlatList

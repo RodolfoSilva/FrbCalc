@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Alert } from 'react-native'
+import { ScrollView, Alert } from 'react-native'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import HeaderButtons from '../../components/HeaderButtons'
@@ -66,14 +66,14 @@ class DisciplinaScreen extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
         <DisciplinaForm
           ref={(ref) => (this.form = ref)}
           initialState={this.props.navigation.state.params.disciplina}
           onSubmit={this.onSubmit}
           style={{ paddingHorizontal: 16 }}
         />
-      </View>
+      </ScrollView>
     )
   }
 }
