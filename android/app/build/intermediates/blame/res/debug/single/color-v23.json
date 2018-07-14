@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/color-v23/abc_tint_default.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/color-v23/abc_tint_switch_track.xml"
+    }
+]

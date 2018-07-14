@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher_round.png",
+        "source": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/mipmap-xxhdpi/ic_launcher.png",
+        "source": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    }
+]

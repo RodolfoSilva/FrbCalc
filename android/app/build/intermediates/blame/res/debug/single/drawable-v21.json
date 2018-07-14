@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/d2b1ada309e8a14569612bed614f5cf369f66929/output/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/drawable-v21/abc_btn_colored_material.xml"
+    }
+]

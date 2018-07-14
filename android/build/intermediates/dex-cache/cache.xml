@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/rodolfosilva/workspace/react-native/WydenCalc/node_modules/react-native-vector-icons/android/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="279750fed3c920d06351dbf32889c1b48203c7ad">
+        <dex dex="/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/pre-dexed/debug/classes_9ee7745dfae0dac2b1fdd911e80d35d5443a68be.jar" />
+    </item>
+
+</items>

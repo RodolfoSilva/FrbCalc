@@ -1,0 +1,74 @@
+[
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/anim/catalyst_push_up_out.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/19746b81a8ba4e95935c2ee830a61e2d91c2f499/output/res/anim/catalyst_push_up_out.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/anim/catalyst_fade_in.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/19746b81a8ba4e95935c2ee830a61e2d91c2f499/output/res/anim/catalyst_fade_in.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/anim/tooltip_enter.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/anim/tooltip_enter.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/anim/tooltip_exit.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/anim/tooltip_exit.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/anim/catalyst_slide_down.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/19746b81a8ba4e95935c2ee830a61e2d91c2f499/output/res/anim/catalyst_slide_down.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/anim/catalyst_fade_out.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/19746b81a8ba4e95935c2ee830a61e2d91c2f499/output/res/anim/catalyst_fade_out.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/anim/abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/anim/catalyst_slide_up.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/19746b81a8ba4e95935c2ee830a61e2d91c2f499/output/res/anim/catalyst_slide_up.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/anim/catalyst_push_up_in.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/19746b81a8ba4e95935c2ee830a61e2d91c2f499/output/res/anim/catalyst_push_up_in.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/anim/abc_slide_in_top.xml"
+    }
+]
