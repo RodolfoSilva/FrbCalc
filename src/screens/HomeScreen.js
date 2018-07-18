@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, FlatList, TouchableOpacity } from 'react-native';
 import Disciplina from '../components/Disciplina';
+import MyToolbar from '../components/MyToolbar';
 import { ActionButton } from 'react-native-material-ui';
 import { disciplinasSelectors } from '../state/ducks/disciplinas';
 import { Toolbar, Button, COLOR, Card } from 'react-native-material-ui';
@@ -18,6 +19,7 @@ class HomeScreen extends React.PureComponent {
       >
         <Disciplina
           title={item.name}
+          {...item}
           ap1={item.ap1}
           ap2={item.ap2}
           ap3={item.ap3}
@@ -26,12 +28,29 @@ class HomeScreen extends React.PureComponent {
     );
   };
 
+  actions = [
+    {
+      icon: 'add',
+      label: 'Adicionar disciplina',
+      onSelect: () => this.props.navigation.navigate('Form')
+    },
+    {
+      icon: 'all-inclusive',
+      label: 'Sobre',
+      menu: true,
+      onSelect: () => this.props.navigation.navigate('About')
+    }
+    // {
+    //   label: 'Configurações',
+    //   onSelect: () => this.props.navigation.navigate('Settings')
+    // }
+  ];
+
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <Toolbar
-          rightElement="all-inclusive"
-          onRightElementPress={() => this.props.navigation.navigate('About')}
+        <MyToolbar
+          rightActions={this.actions}
           centerElement="Calculadora Wyden"
         />
         <View style={{ flex: 1 }}>
@@ -40,10 +59,6 @@ class HomeScreen extends React.PureComponent {
             keyExtractor={({ id }) => id}
             renderItem={this.renderItem}
           />
-          <ActionButton
-            icon="add"
-            onPress={() => this.props.navigation.navigate('Form')}
-          />
         </View>
       </View>
     );
@@ -51,7 +66,7 @@ class HomeScreen extends React.PureComponent {
 }
 
 const mapStateToProps = state => ({
-  items: disciplinasSelectors.getAll(state)
+  items: disciplinasSelectors.getAllProcessed(state)
 });
 const mapDispatchToProps = {};
 

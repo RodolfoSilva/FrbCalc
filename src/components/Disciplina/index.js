@@ -19,7 +19,43 @@ const Nota = ({ title, value }) => (
   </View>
 );
 
-const Disciplina = ({ title, ap1, ap2, ap3 }) => (
+const RenderResult = (nota, legend) => {
+  if (nota === null || nota > 10) {
+    return null;
+  }
+
+  return (
+    <React.Fragment>
+      <Text style={{ fontSize: 30 }}>{nota}</Text>
+      <Text style={{ fontSize: 11, textAlign: 'center' }}>{legend}</Text>
+    </React.Fragment>
+  );
+};
+
+const Result = ({ mediaFinal, notaParaAP1, notaParaAP2, notaParaAP3 }) => {
+  const message = [
+    RenderResult(mediaFinal, 'Média final'),
+    RenderResult(notaParaAP1, 'Necessário tirar na AP1'),
+    RenderResult(notaParaAP2, 'Necessário tirar na AP2'),
+    RenderResult(notaParaAP3, 'Necessário tirar na AP3')
+  ].find(result => result !== null);
+  if (message) return message;
+
+  return (
+      <Text style={{ fontSize: 30 }}>_._</Text>
+  );
+};
+
+const Disciplina = ({
+  title,
+  ap1,
+  ap2,
+  ap3,
+  mediaFinal,
+  notaParaAP1,
+  notaParaAP2,
+  notaParaAP3
+}) => (
   <View style={{ padding: 8 }}>
     <View>
       <Text style={{ textAlign: 'left', fontWeight: '500' }}>{title}</Text>
@@ -47,11 +83,7 @@ const Disciplina = ({ title, ap1, ap2, ap3 }) => (
           width: 80
         }}
       >
-        <Text style={{ fontSize: 30 }}>10.0</Text>
-        <Text style={{ fontSize: 11, textAlign: 'center' }}>
-          Nescessário tirar na AP1
-        </Text>
-        {/* <Text>Média final</Text> */}
+        <Result {...{ mediaFinal, notaParaAP1, notaParaAP2, notaParaAP3 }} />
       </View>
     </View>
   </View>
