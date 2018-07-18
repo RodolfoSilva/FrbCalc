@@ -48,20 +48,20 @@
         "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/drawable-hdpi-v4/abc_ic_star_half_black_16dp.png"
     },
     {
-        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png",
-        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png"
-    },
-    {
         "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png",
         "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/drawable-hdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
-        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png",
-        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/drawable-hdpi-v4/abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
         "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_star_half_black_36dp.png",
         "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/drawable-hdpi-v4/abc_ic_star_half_black_36dp.png"
+    },
+    {
+        "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png",
+        "source": "/Users/rodolfosilva/.android/build-cache/6fd1805e24d31f5b16412287c2abe62cf95c5db0/output/res/drawable-hdpi-v4/abc_ic_menu_share_mtrl_alpha.png"
     },
     {
         "merged": "/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_normal_pressed.9.png",

@@ -14,7 +14,7 @@ const VerticalLine = () => (
 
 const Nota = ({ title, value }) => (
   <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-    <Text style={{ fontSize: 20 }}>{value}</Text>
+    <Text style={{ fontSize: 20 }}>{value === '' ? '_._' : value}</Text>
     <Text style={{ color: '#BBB', fontSize: 12 }}>{title}</Text>
   </View>
 );
@@ -33,11 +33,11 @@ const Disciplina = ({ title, ap1, ap2, ap3 }) => (
           minHeight: 90
         }}
       >
-        <Nota title="AP1" value={10} />
+        <Nota title="AP1" value={ap1} />
         <VerticalLine />
-        <Nota title="AP2" value={10} />
+        <Nota title="AP2" value={ap2} />
         <VerticalLine />
-        <Nota title="AP3" value={10} />
+        <Nota title="AP3" value={ap3} />
       </View>
       <View
         style={{

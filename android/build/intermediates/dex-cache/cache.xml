@@ -3,6 +3,15 @@
 
     <item
         is-multidex="false"
+        jar="/Users/rodolfosilva/workspace/react-native/WydenCalc/node_modules/react-native-fs/android/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.3"
+        sha1="aa45c129894b29abf56138d4fc11a5c8c5e3106c">
+        <dex dex="/Users/rodolfosilva/workspace/react-native/WydenCalc/android/app/build/intermediates/pre-dexed/debug/classes_70d1b4bd739651217feb3bf3554c7942d04a4e94.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="/Users/rodolfosilva/workspace/react-native/WydenCalc/node_modules/react-native-vector-icons/android/build/intermediates/bundles/default/classes.jar"
         jumboMode="false"
         optimize="true"

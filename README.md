@@ -1,14 +1,14 @@
-# DeVry Calc
+# Wyden Calc
 
-[![GitHub issues](https://img.shields.io/github/issues/RodolfoSilva/DeVryCalc.svg)](https://github.com/RodolfoSilva/DeVryCalc/issues)
-[![GitHub stars](https://img.shields.io/github/stars/RodolfoSilva/DeVryCalc.svg)](https://github.com/RodolfoSilva/DeVryCalc/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/RodolfoSilva/DeVryCalc.svg)](https://github.com/RodolfoSilva/DeVryCalc/network)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/RodolfoSilva/DeVryCalc/master/LICENSE)
-[![Build Status](https://travis-ci.org/RodolfoSilva/DeVryCalc.svg?branch=master)](https://travis-ci.org/RodolfoSilva/DeVryCalc)
+[![GitHub issues](https://img.shields.io/github/issues/RodolfoSilva/WydenCalc.svg)](https://github.com/RodolfoSilva/WydenCalc/issues)
+[![GitHub stars](https://img.shields.io/github/stars/RodolfoSilva/WydenCalc.svg)](https://github.com/RodolfoSilva/WydenCalc/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/RodolfoSilva/WydenCalc.svg)](https://github.com/RodolfoSilva/WydenCalc/network)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/RodolfoSilva/WydenCalc/master/LICENSE)
+[![Build Status](https://travis-ci.org/RodolfoSilva/WydenCalc.svg?branch=master)](https://travis-ci.org/RodolfoSilva/WydenCalc)
 
-Calculadora de notas para alunos da DeVry.
+Calculadora de notas para alunos da Wyden.
 
-[<img src="https://play.google.com/intl/en_us/badges/images/generic/pt-br_badge_web_generic.png" alt="Disponível no Google Play" height="100">](https://play.google.com/store/apps/details?id=com.rodolfosilva.devrycalc) 
+[<img src="https://play.google.com/intl/en_us/badges/images/generic/pt-br_badge_web_generic.png" alt="Disponível no Google Play" height="100">](https://play.google.com/store/apps/details?id=com.rodolfosilva.WydenCalc) 
 
 # Configurando o Ambiente
 
@@ -18,7 +18,7 @@ Calculadora de notas para alunos da DeVry.
   <code>npm install -g ionic</code> para o Ionic
 * Instale os pacotes do npm com o comando <code>npm install</code> 
 
-# Rodando o DeVry Calc
+# Rodando o Wyden Calc
 
 * Para reproduzir o app localmente, digite <code>ionic serve</code>
 
